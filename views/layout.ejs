@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%- title %> | Global Connections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/styles/app.css">
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#"><i class="fa fa-check"></i> Global Connections</a>
+    </div>
+    <div class="collapse navbar-collapse" style="width="100%">
+      <ul class="nav navbar-nav">
+        <li class="active">
+        <li><a href="/Home">Home</a></li>
+        <li><a href="/Survey">GuestSurvey</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div>
+  <%- body %>
+</div>
+
+<script type="text/javascript" src="/js/socket.io.js"></script>
+<script type="text/javascript" src="/js/sails.io.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $("#trigger").click(function(){
+        if (this).is(hover)
+        {
+          $("#gc1").toggleClass("newClass");
+          $("#gc2").toggleClass("newClass");
+        }
+    })
+});
+</script>
+</head>
+<body>
+<div class="homepage">
+  <div class="homelink">
+    <a href="/Survey"><img class="subpic" src="images/skilodge.jpg"></a>
+    <div class="hiddentext">Guest Survey</div>
+  </div>
+  <div class="homelink">
+    <a href="/Survey"><img class="subpic" src="images/luau.jpg"></a>
+    <div class="hiddentext">Vacation Planning</div>
+  </div>
+  <div class="homelink">
+    <a href="/Survey"><img class="subpic" src="images/yurts.jpg"></a>
+    <div class="hiddentext">Accommodations</div>
+  </div>
+  <div class="homelink">
+    <a href="/Survey"><img class="subpic" src="images/london.jpg"></a>
+    <div class="hiddentext">HelpLine</div>
+  </div>
+</div>
+</body>

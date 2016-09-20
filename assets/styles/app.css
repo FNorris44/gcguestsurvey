@@ -1,0 +1,75 @@
+.homelink {
+  padding: 15px 20px 15px 20px;
+  float:left;
+  text-align: center;
+}
+.homepage{
+  width: 1200px;
+  align-items: center;
+  margin: auto;
+}
+
+img.subpic {
+  float: bottom;
+  height: 350px;
+  width: 500px;
+  border-radius: 175px;
+	-webkit-border-radius: 175px;
+	-moz-border-radius: 175px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+}
+img.thumbpic {
+  float: bottom;
+  height: 150px;
+  width: 150px;
+  border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 3);
+}
+
+body {
+  padding-top: 100px;
+  margin: auto;
+}
+
+.newClass{visibility: hidden}
+
+img {
+   -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+   -o-transition: all 1s ease;
+   -ms-transition: all 1s ease;
+   transition: all 1s ease;
+}
+
+img:hover {
+   -webkit-filter: brightness(30%);
+   filter: brightness(30%);
+}
+
+.hiddentext{
+  font-size: 35px;
+  color: #007700;
+  font-weight: bold;
+  font-family: Verdana, Geneva, serif;
+  font-style: italic;
+  text-shadow: 2px 2px #000000
+}
+
+form {
+  font-size: 60px;
+}
+
+input {
+  border: none;
+
+}
+
+input:focus {
+  border: none;
+}
