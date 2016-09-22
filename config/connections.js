@@ -60,9 +60,10 @@ module.exports.connections = {
      adapter: 'sails-mongo',
      host: 'ds035806.mlab.com',
      port: 35806,
-     user: 'heroku_rj89jj8q', //optional
-     password: 'heroku_rj89jj8q', //optional
-     database: 'heroku_rj89jj8q' //optional
+     user: 'heroku_rj89jj8q',
+     password: 'heroku_rj89jj8q',
+     database: 'heroku_rj89jj8q',
+     uri_decode_auth: true,
   },
 
   /***************************************************************************
