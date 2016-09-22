@@ -1,8 +1,8 @@
 {
   "name": "gcgguestsurvey",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.0.1",
+  "description": "GC Guest Survey",
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -22,7 +22,8 @@
     "lodash": "^4.16.1",
     "rc": "1.0.1",
     "sails": "~0.12.4",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-mongo": "0.12.1"
   },
   "scripts": {
     "debug": "node debug app.js",
