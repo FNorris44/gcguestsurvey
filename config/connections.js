@@ -61,6 +61,17 @@ module.exports.connections = {
      url: 'mongodb://heroku_rj89jj8q:479cz231@ds035806.mlab.com:35806/heroku_rj89jj8q'
   },
 
+  'default': 'mongoose',
+
+  // sails v.0.9.0
+  herokuMongoose: {
+    module   : 'sails-mongoose',
+    host     : 'ds035806.mlab.com',
+    user     : 'heroku_rj89jj8q',
+    password : '479cz231',
+    database : 'heroku_rj89jj8q'
+  }
+
   /***************************************************************************
   *                                                                          *
   * PostgreSQL is another officially supported relational database.          *
