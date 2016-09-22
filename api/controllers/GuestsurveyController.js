@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-	Survey: function (req, res) {
+	index: function (req, res) {
 		res.view(null, {
 				title: 'Survey'
 		});

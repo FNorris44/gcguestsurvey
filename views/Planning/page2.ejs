@@ -1,0 +1,76 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1"></script><script type="text/javascript" src="js/infinite-rotator.js"></script>
+<script>
+$(window).load(function() { //start after HTML, images have loaded
+
+    var InfiniteRotator =
+    {
+        init: function()
+        {
+            //initial fade-in time (in milliseconds)
+            var initialFadeIn = 1000;
+
+            //interval between items (in milliseconds)
+            var itemInterval = 5000;
+
+            //cross-fade time (in milliseconds)
+            var fadeTime = 2500;
+
+            //count number of items
+            var numberOfItems = $('.rotating-item').length;
+
+            //set current item
+            var currentItem = 0;
+
+            //show first item
+            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+
+            //loop through the items
+            var infiniteLoop = setInterval(function(){
+                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+
+                if(currentItem == numberOfItems -1){
+                    currentItem = 0;
+                }else{
+                    currentItem++;
+                }
+                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+
+            }, itemInterval);
+        }
+    };
+
+    InfiniteRotator.init();
+
+});
+</script>
+
+<form class="Questionnare">
+  <table>
+    <tr>
+      <td class="right-text">Would you like to upgrade to a 2-bed?</td>
+      <td><input type='checkbox' name="2bed"></td>
+    </tr>
+    <tr>
+      <td class="right-text">3-bed?</td>
+      <td><input type="checkbox" name="3bed"></td>
+    </tr>
+    <tr>
+      <td class="right-text">Will you travel between March and August?</td>
+      <td><input type="checkbox" name="peek"></td>
+    </tr>
+  </table>
+</form>
+
+
+<div id="rotating-item-wrapper" class="Q-img">
+ <img class="rotating-item shadow" src="/images/ireland/ireland1.jpg"/ width="650" height="300">
+ <img class="rotating-item shadow" src="/images/ireland/ireland2.jpg"/ width="650" height="300">
+ <img class="rotating-item shadow" src="/images/ireland/ireland3.jpg"/ width="650" height="300">
+ <img class="rotating-item shadow" src="/images/ireland/ireland4.jpg"/ width="650" height="300">
+ <img class="rotating-item shadow" src="/images/ireland/ireland5.jpg"/ width="650" height="300">
+ <div class="Q-text">Your Chosen Destination</div>
+</div>
+<pre>
+
+
+  <a id="trigger"><img class="thumbpic shadow Q-img Q-thumb" src="/images/ThumbsUp.jpg"></a>
