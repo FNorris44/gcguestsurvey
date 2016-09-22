@@ -33,17 +33,27 @@
     <link rel="stylesheet" href="/styles/importer.css">
     <link rel="stylesheet" href="/styles/ken-burns-effect.css">
     <!--STYLES END-->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/imageroller.js"></script>
+    <script src="/js/questionbuttons.js"></script>
+    <script src="/js/survey.js"></script>
+    <!--SCRIPTS END-->
+
   </head>
 
   <body>
-    <div class="pic-wrapper">
+    <%- body %>
+    <div class="pic-wrapper" style="z-index:-1;">
 		  <figure class="pic-1"></figure>
 		  <figure class="pic-2"></figure>
 		  <figure class="pic-3"></figure>
 		  <figure class="pic-4"></figure>
       <figure class="pic-5"></figure>
 		</div>
-    <%- body %>
+
 
 
 
@@ -96,11 +106,6 @@
 
     -->
 
-    <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/home.js"></script>
-    <script src="/js/questionbuttons.js"></script>
-    <script src="/js/survey.js"></script>
-    <!--SCRIPTS END-->
+
   </body>
 </html>
