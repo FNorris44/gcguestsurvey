@@ -25,5 +25,13 @@ module.exports = function(grunt) {
     'clean:build',
     'copy:build'
   ]);
-  grunt.registerTask('heroku:production', 'clean less mincss uglify');
+  grunt.registerTask('heroku:production', [
+    'compileAssets',
+    'concat',
+    'uglify',
+    'cssmin',
+    'linkAssetsBuildProd',
+    'clean:build',
+    'copy:build'
+  ]);
 };
