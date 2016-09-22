@@ -66,7 +66,7 @@ module.exports.connections = {
   // sails v.0.9.0
   herokuMongoose: {
     module   : 'sails-mongoose',
-    host     : 'ds035806.mlab.com',
+    host     : 'ds035806.mlab.com:35806',
     user     : 'heroku_rj89jj8q',
     password : '479cz231',
     database : 'heroku_rj89jj8q'
