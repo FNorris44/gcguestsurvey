@@ -1,4 +1,4 @@
-// Copyright (c) 2010 TrendMedia Technologies, Inc., Brian McNitt. 
+// Copyright (c) 2010 TrendMedia Technologies, Inc., Brian McNitt.
 // All rights reserved.
 //
 // Released under the GPL license
@@ -7,10 +7,10 @@
 // **********************************************************************
 // This program is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // **********************************************************************
 
-$(window).load(function() { //start after HTML, images have loaded
+$(window).on('load', function() { //start after HTML, images have loaded
 
     var InfiniteRotator = {
         init: function() {
@@ -32,7 +32,7 @@ $(window).load(function() { //start after HTML, images have loaded
             //show first item
             $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
 
-            //loop through the items		
+            //loop through the items
             var infiniteLoop = setInterval(function() {
                 $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
 

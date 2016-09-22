@@ -1,4 +1,4 @@
-$(window).load(function() { //start after HTML, images have loaded
+$(window).on('load', function() { //start after HTML, images have loaded
     var InfiniteRotator =
     {
         init: function()
