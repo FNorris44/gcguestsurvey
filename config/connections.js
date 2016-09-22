@@ -57,8 +57,8 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   herokuMongodbServer: {
-    adapter: 'sails-mongo',
-    url: process.env.MONGOLAB_URI
+     adapter: 'sails-mongo',
+     url: 'mongodb://heroku_rj89jj8q:heroku_rj89jj8q@ds035806.mlab.com:35806/heroku_rj89jj8q'
   },
 
   /***************************************************************************
