@@ -136,6 +136,8 @@ input:focus {
 .center-frame {
   display: block;
   z-index: 200 !important;
+  border: solid 2px #C19A6B;
+  border-radius: 1em;
 }
 
 .semi-transparent-background {
@@ -143,6 +145,7 @@ input:focus {
   width: 100%;
   height: 100%;
   background-color: #DDDDDD;
-  z-index: 0 !important;
+  z-index: -1 !important;
+  border-radius: 1em;
   opacity: .5;
 }
