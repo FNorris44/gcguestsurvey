@@ -18,8 +18,7 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-     connection: 'herokuMongodbServer',
-     url: process.env.MONGODB_URI
+     connection: 'herokuMongodbServer'
   },
 
   /***************************************************************************
