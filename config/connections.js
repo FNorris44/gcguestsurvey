@@ -59,9 +59,7 @@ module.exports.connections = {
   herokuMongodbServer: {
      adapter: 'sails-mongo',
      url: process.env.MONGODB_URI
-  },
-
-  'default': 'herokuMongodbServer'
+  }
 
   /***************************************************************************
   *                                                                          *
@@ -79,7 +77,6 @@ module.exports.connections = {
   //   password: 'YOUR_POSTGRES_PASSWORD', // optional
   //   database: 'YOUR_POSTGRES_DB' //optional
   // }
-
 
   /***************************************************************************
   *                                                                          *
