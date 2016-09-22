@@ -33,18 +33,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    controller: 'HomeController',
-    action: 'index'
-  },
-  '/about': {
-    controller: 'AboutController',
-    action: 'index'
-  },
-  '/Survey': {
-    controller: 'GuestSurveyController',
-    action: 'Survey'
+    view: 'homepage'
   }
-
 
   /***************************************************************************
   *                                                                          *
