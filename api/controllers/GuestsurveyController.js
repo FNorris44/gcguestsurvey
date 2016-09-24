@@ -7,9 +7,14 @@
 
 module.exports = {
 	index: function (req, res) {
-		res.view(null, {
-				title: 'Survey'
-		});
-},
+		res.view(
+			'GuestSurvey/index',
+			{ errors: req.flash('error') });
+	},
 
+	page2: function (req, res) {
+		res.view(
+			'GuestSurvey/page2',
+			{ errors: req.flash('error') });
+	}
 };
