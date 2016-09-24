@@ -7,13 +7,13 @@
 
 module.exports = {
 	index: function (req, res) {
-		res.view(null, {
-				title: 'Planning'
-		});
+		res.view(
+			'Planning/index',
+			{ errors: req.flash('error') });
 	},
 	page2: function (req, res) {
-		res.view(null, {
-				title: 'Questionnare'
-		});
+		res.view(
+			'Planning/page2',
+			{ errors: req.flash('error') });
 	},
 };

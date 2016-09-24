@@ -7,8 +7,8 @@
 
 module.exports = {
 	index: function (req, res) {
-    res.view(null, {
-        title: 'About'
-    });
-},
+		res.view(
+			'About/index',
+			{ errors: req.flash('error') });
+		},
 };
