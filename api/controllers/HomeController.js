@@ -8,7 +8,7 @@
 module.exports = {
 	index: function (req, res) {
     res.view(
-			'home/index',
+			'Home/index',
       { errors: req.flash('error') });
   },
 };
