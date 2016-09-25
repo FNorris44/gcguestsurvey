@@ -1,28 +1,38 @@
 <div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
-      <form>
-        <div id="gc1">
-          How many people will vacation together?
-          <input class="form-control" type="number" name="peoplevaca" min="0" max="100" step="1" value="2"><br>
-        </div>
-        <div id="gc2" class="newClass">
-          What will a hotel generally cost per night?
-          <input type="number" name="hotelcost" min="0" step="5" value="200"><br>
-        </div>
-        <div id="gc3" class="newClass">
-          How many days do you vacation in a year?
-          <input type="number" name="daysvaca" min="0" max="365" step="1" value="7"><br>
-        </div>
-        <div id="gc4" class="newClass">
-          How many years do you plan on vacationing?
-          <input type="number" name="yearsvaca" min="0" max="100" step="5" value="10"><br>
-        </div>
-        <div id="gc5" class="newClass">
-          What do you think the inflation will be for the next 10 years?
-          <input type="number" name="inflation" min="0" max="25" step=".5" value="3"><br>
-        </div>
-      </form>
-      <a id="trigger"><img class="thumbpic" src="/images/ThumbsUp.jpg"></a>
+      <table>
+        <tr>
+          <td id="gc1" class="surveytext">How many people will vacation together?</td>
+        </tr>
+        <tr>
+          <td id="gc2" class="surveytext newClass">What will a hotel generally cost per night?</td>
+        </tr>
+        <tr>
+          <td id="gc3" class="surveytext newClass">How many days do you vacation in a year?</td>
+        </tr>
+        <tr>
+          <td id="gc4" class="surveytext newClass">How many years do you plan on vacationing?</td>
+        </tr>
+        <tr>
+          <td id="gc5" class="surveytext newClass">What do you think the inflation will be for the next 10 years?</td>
+        </tr>
+      </table>
+      <a id="trigger"><img class="thumbpic darken" src="/images/ThumbsUp.jpg"></a>
+      <table class="surveykeys">
+        <tr>
+          <td><img id="up" class="arrow" src="/images/arrowup.jpg"></td>
+        </tr>
+        <tr>
+          <td>
+            <form>
+              <input id="surveyvalue" step=".5" type="number" value="2"><br>
+            </form>
+          </td>
+        </tr>
+        <tr>
+          <td><img id="down" class="arrow" src="/images/arrowdown.jpg"></td>
+        </tr>
+      </table>
     </div>
   </div>

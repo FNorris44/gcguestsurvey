@@ -11,6 +11,7 @@ module.exports = {
     vacationers : 'int',
     hotelcost : 'int',
     vacationdays : 'int',
+    vacationyears : 'int',
     inflation : 'float'
   }
 };

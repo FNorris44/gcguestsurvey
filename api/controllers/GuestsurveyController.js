@@ -12,9 +12,9 @@ module.exports = {
 			{ errors: req.flash('error') });
 	},
 
-	page2: function (req, res) {
+	survey2: function (req, res) {
 		res.view(
-			'GuestSurvey/page2',
+			'GuestSurvey/survey2',
 			{ errors: req.flash('error') });
 	}
 };

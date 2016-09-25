@@ -26,4 +26,19 @@ $(document).ready(function(){
   };
 
   centerIt($('.center-frame'));
+
+var topleftit = function (el /* (jQuery element) Element to center */) {
+    if (!el) {
+      return;
+    }
+    var moveIt = function () {
+        el.css("position","absolute");
+        el.css("left", 0 + "px");
+        el.css("top", 0 + "px");
+    };
+    $(window).resize(moveIt);
+    moveIt();
+};
+    topleftit($('.homeicon'));
+    
 });

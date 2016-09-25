@@ -1,47 +1,3 @@
-<script>
-$(window).on('load', function() { //start after HTML, images have loaded
-
-    var InfiniteRotator =
-    {
-        init: function()
-        {
-            //initial fade-in time (in milliseconds)
-            var initialFadeIn = 1000;
-
-            //interval between items (in milliseconds)
-            var itemInterval = 5000;
-
-            //cross-fade time (in milliseconds)
-            var fadeTime = 2500;
-
-            //count number of items
-            var numberOfItems = $('.rotating-item').length;
-
-            //set current item
-            var currentItem = 0;
-
-            //show first item
-            $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
-
-            //loop through the items
-            var infiniteLoop = setInterval(function(){
-                $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
-
-                if(currentItem == numberOfItems -1){
-                    currentItem = 0;
-                }else{
-                    currentItem++;
-                }
-                $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
-
-            }, itemInterval);
-        }
-    };
-
-    InfiniteRotator.init();
-
-});
-</script>
 <div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
@@ -64,14 +20,14 @@ $(window).on('load', function() { //start after HTML, images have loaded
 
 
     <div id="rotating-item-wrapper" class="Q-img">
-     <img class="rotating-item shadow" src="/images/ireland/ireland1.jpg"/ width="650" height="300">
-     <img class="rotating-item shadow" src="/images/ireland/ireland2.jpg"/ width="650" height="300">
-     <img class="rotating-item shadow" src="/images/ireland/ireland3.jpg"/ width="650" height="300">
-     <img class="rotating-item shadow" src="/images/ireland/ireland4.jpg"/ width="650" height="300">
-     <img class="rotating-item shadow" src="/images/ireland/ireland5.jpg"/ width="650" height="300">
+     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland1.jpg"/>
+     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland2.jpg"/>
+     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland3.jpg"/>
+     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland4.jpg"/>
+     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland5.jpg"/>
      <div class="Q-text">Your Chosen Destination</div>
     </div>
 
-      <a id="trigger"><img class="thumbpic shadow Q-img Q-thumb" src="/images/ThumbsUp.jpg"></a>
+      <a id="trigger"><img class="thumbpic darken" src="/images/ThumbsUp.jpg"></a>
     </div>
   </div>
