@@ -17,7 +17,7 @@ body {
   border-radius: 50px;
 }
 .planlink {
-  margin: 0px 30px 20px 30px;
+  margin: 0px 15px 10px 15px;
   float:left;
   text-align: center;
   border: 1px #bbbbbb solid;
@@ -25,7 +25,14 @@ body {
   width: 250px;
   font-style: : cursive cursive ariel;
 }
-
+.planpic {
+  float: bottom;
+  height: 225px;
+  width: 240px;
+  border: 1px black solid;
+  margin-left: -262px;
+  margin-top: 15px;
+}
 img.subpic {
   float: bottom;
   height: 250px;
@@ -63,14 +70,7 @@ img.back{
     top: 0;
     left: 0;
 }
-.planpic {
-  float: bottom;
-  height: 225px;
-  width: 240px;
-  border: 1px black solid;
-  margin-left: -278px;
-  margin-top: 15px;
-}
+
 .thumbpic {
   height: 150px;
   width: 150px;
@@ -89,6 +89,8 @@ img.back{
   left: 60%;
 }
 .newClass{visibility: hidden}
+
+.permhidden {visibility: hidden}
 
 .arrow {
   height:100px;

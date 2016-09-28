@@ -8,6 +8,9 @@
           <td><input type='checkbox' name="2bed"></td>
         </tr>
         <tr>
+          <td id="survey1"></td>
+        </tr>
+        <tr>
           <td class="right-text">3-bed?</td>
           <td><input type="checkbox" name="3bed"></td>
         </tr>
@@ -20,14 +23,34 @@
 
 
     <div id="rotating-item-wrapper" class="Q-img">
-     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland1.jpg"/>
-     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland2.jpg"/>
-     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland3.jpg"/>
-     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland4.jpg"/>
-     <img class="rotating-item shadow Q-img" src="/images/ireland/ireland5.jpg"/>
+     <img id="planpic1" class="rotating-item shadow Q-img" src="images/ireland/p1.jpg"/>
+     <img id="planpic2" class="rotating-item shadow Q-img" src="images/ireland/p2.jpg"/>
+     <img id="planpic3" class="rotating-item shadow Q-img" src="images/ireland/p3.jpg"/>
+     <img id="planpic4" class="rotating-item shadow Q-img" src="images/ireland/p4.jpg"/>
+     <img id="planpic5" class="rotating-item shadow Q-img" src="images/ireland/p5.jpg"/>
      <div class="Q-text">Your Chosen Destination</div>
     </div>
 
       <a id="trigger"><img class="thumbpic darken" src="/images/ThumbsUp.jpg"></a>
     </div>
   </div>
+
+  <script language="JavaScript">
+
+  	function addComment()
+  	{
+  		var parameters = location.search.substring(1).split("&");
+
+      var temp = parameters[0].split("=");
+      q1 = unescape(temp[1]);
+      temp = parameters[1].split("=");
+
+  		document.getElementById("planpic1").src = "images/" + q1 + "/p1.jpg";
+      document.getElementById("planpic2").src = "images/" + q1 + "/p2.jpg";
+      document.getElementById("planpic3").src = "images/" + q1 + "/p3.jpg";
+      document.getElementById("planpic4").src = "images/" + q1 + "/p4.jpg";
+      document.getElementById("planpic5").src = "images/" + q1 + "/p5.jpg";
+  	}
+  addComment();
+
+  </script>

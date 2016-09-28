@@ -1,36 +1,33 @@
 $(document).ready(function(){
 
-
-
       $("#trigger").click(function() {
         if (!$('#gc1').hasClass("newClass")) {
           $("#gc1").toggleClass("newClass");
           $("#gc2").toggleClass("newClass");
-          var q1 = document.getElementById('surveyvalue').value;
+          document.getElementById('q1').value = document.getElementById('surveyvalue').value;
           $("#surveyvalue").val("150");
         }
         else if (!$('#gc2').hasClass("newClass")) {
           $("#gc2").toggleClass("newClass");
           $("#gc3").toggleClass("newClass");
-          var q2 = document.getElementById('surveyvalue').value;
+          document.getElementById('q2').value = document.getElementById('surveyvalue').value;
           $("#surveyvalue").val("7");
         }
         else if (!$('#gc3').hasClass("newClass")) {
           $("#gc3").toggleClass("newClass");
           $("#gc4").toggleClass("newClass");
-          var q3 = document.getElementById('surveyvalue').value;
+          document.getElementById('q3').value = document.getElementById('surveyvalue').value;
           $("#surveyvalue").val("10");
         }
         else if (!$('#gc4').hasClass("newClass")) {
           $("#gc4").toggleClass("newClass");
           $("#gc5").toggleClass("newClass");
-          var q4 = document.getElementById('surveyvalue').value;
+          document.getElementById('q4').value = document.getElementById('surveyvalue').value;
           $("#surveyvalue").val("3");
         }
         else if (!$('#gc5').hasClass("newClass")) {
-          var q5 = document.getElementById('surveyvalue').value;
-
-          window.location.href = '/Survey2';
+          document.getElementById('q5').value = document.getElementById('surveyvalue').value;
+          $('form[name=survey]').submit();
         }
       });
 
@@ -75,4 +72,29 @@ $(document).ready(function(){
           document.getElementById('survey3').value=q3;
           document.getElementById('survey4').value=q4;
           document.getElementById('survey5').value=q5;
+
+          function addComment()
+        	{
+        		var parameters = location.search.substring(1).split("&");
+
+        		var temp = parameters[0].split("=");
+        		q1 = parseInt(unescape(temp[1]));
+        		temp = parameters[1].split("=");
+        		q2 = parseInt(unescape(temp[1]));
+            temp = parameters[2].split("=");
+            q3 = parseInt(unescape(temp[1]));
+            temp = parameters[3].split("=");
+        		q4 = parseInt(unescape(temp[1]));
+            temp = parameters[4].split("=");
+            q5 = parseInt(unescape(temp[1]));
+
+        		document.getElementById("survey1").innerHTML = q1;
+        		document.getElementById("survey2").innerHTML = q2;
+            document.getElementById("survey3").innerHTML = q3;
+            document.getElementById("survey4").innerHTML = q4;
+            document.getElementById("survey5").innerHTML = q5;
+            document.getElementById("survey6").innerHTML = q6;
+            document.getElementById("surveydesc").innerHTML = 'Total Cost of Vacationing for the next ' + String(q4) + ' years:';
+        	}
+        addComment();
 });
