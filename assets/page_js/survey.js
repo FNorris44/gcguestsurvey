@@ -31,7 +31,7 @@ $(document).ready(function(){
           $("#gc3").toggleClass("newClass");
           $("#gc4").toggleClass("newClass");
           $("#answers").toggleClass("newClass");
-          $('form[name=survey]').submit();
+
         }
       });
 
