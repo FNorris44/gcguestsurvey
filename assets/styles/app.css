@@ -177,7 +177,10 @@ input {
 input:focus {
   border: none;
 }
-
+.setwidth {
+  margin-left: 30px;
+  text-align: center;
+}
 .center-frame {
   display: block;
   z-index: 200 !important;
