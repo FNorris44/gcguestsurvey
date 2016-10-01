@@ -26,6 +26,11 @@ $(document).ready(function(){
         }
         else if (!$('#gc5').hasClass("newClass")) {
           document.getElementById('q5').value = document.getElementById('surveyvalue').value;
+          $("#gc1").toggleClass("newClass");
+          $("#gc2").toggleClass("newClass");
+          $("#gc3").toggleClass("newClass");
+          $("#gc4").toggleClass("newClass");
+          $("#answers").toggleClass("newClass");
           $('form[name=survey]').submit();
         }
       });
