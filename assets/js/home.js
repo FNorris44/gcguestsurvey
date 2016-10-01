@@ -40,5 +40,5 @@ var topleftit = function (el /* (jQuery element) Element to center */) {
     moveIt();
 };
     topleftit($('.homeicon'));
-    
+
 });
