@@ -17,20 +17,20 @@ body {
   border-radius: 50px;
 }
 .planlink {
-  margin: 0px 15px 10px 15px;
+  margin: 0px 35px 25px 25px;
   float:left;
   text-align: center;
   border: 1px #bbbbbb solid;
-  height: 300px;
-  width: 250px;
+  height: 350px;
+  width: 300px;
   font-style: : cursive cursive ariel;
 }
 .planpic {
   float: bottom;
-  height: 225px;
-  width: 240px;
+  height: 275px;
+  width: 290px;
   border: 1px black solid;
-  margin-left: -262px;
+  margin-left: -332px;
   margin-top: 15px;
 }
 img.subpic {
@@ -72,11 +72,9 @@ img.back{
 }
 
 .thumbpic {
-  height: 150px;
-  width: 150px;
-  border-radius: 75px;
-	-webkit-border-radius: 75px;
-	-moz-border-radius: 75px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
   position: fixed;
   top: 60%;
   left: 70%;
@@ -93,11 +91,9 @@ img.back{
 .permhidden {visibility: hidden}
 
 .arrow {
-  height:100px;
-  width: 100px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
+  height:150px;
+  width: 150px;
+  border-radius: 50%;
 }
 .arrow:hover {
   -webkit-filter: brightness(50%);
@@ -105,7 +101,7 @@ img.back{
 }
 #surveyvalue {
   font-size: 30px;
-  width: 100px;
+  width: 150px;
   float:center;
   text-align: center;
   font-family: impact, Geneva, serif;
@@ -153,10 +149,11 @@ img.back{
   margin-left: 10px;
 }
 .Q-img {
-  width: 750px;
-  height: 390px;
+  width: 850px;
+  height: 490px;
   position: absolute;
   bottom: 0;
+  margin-top: -15px;
   border-radius: 10px;
 
 }
@@ -164,7 +161,9 @@ img.back{
   text-align: right;
 }
 form {
-  font-size: 40px;
+  margin-left: auto;
+  margin-right:auto;
+  font-size: 50px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
