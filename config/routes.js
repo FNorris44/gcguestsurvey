@@ -41,7 +41,7 @@ module.exports.routes = {
     action: 'index'
   },
   '/SurveyHome': {
-    controller: 'GuestSurveyController',
+    controller: 'HomeController',
     action: 'index'
   },
   '/Survey': {
