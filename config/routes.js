@@ -48,10 +48,6 @@ module.exports.routes = {
     controller: 'GuestSurveyController',
     action: 'index'
   },
-  '/Survey2': {
-    controller: 'GuestSurveyController',
-    action: 'survey2'
-  },
   '/Planning': {
     controller: 'PlanningController',
     action: 'index'
