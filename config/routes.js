@@ -34,10 +34,14 @@ module.exports.routes = {
 
   '/': {
     controller: 'HomeController',
-    action: 'index'
+    action: 'SurveyHome'
   },
   '/about': {
     controller: 'AboutController',
+    action: 'index'
+  },
+  '/SurveyHome': {
+    controller: 'GuestSurveyController',
     action: 'index'
   },
   '/Survey': {
