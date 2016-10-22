@@ -51,7 +51,7 @@ $(document).ready(function(){
       $("#surveydesc").toggleClass("newClass");
       q6 =  (Math.ceil(q1/2)*q2*q3*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5)).toFixed(2);
       document.getElementById('survey6').innerHTML= q6;
-      $('.pic-wrapper').starExplosion();
+      $('.pic-wrapper').fireworks();
     }
   });
 
