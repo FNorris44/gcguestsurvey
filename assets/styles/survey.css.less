@@ -14,13 +14,14 @@
     text-align: center;
   }
 
-  .center-text-vertically {
+  .center-vertically {
     display: inline-block;
-    position: relative;
-    margin-top: auto;
-    margin-bottom: auto;
-    vertical-align: middle;
-    line-height: normal;
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
   }
 
   body {
@@ -266,7 +267,7 @@
         -ms-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-  
+
   .spin:hover {
     radius-border: 25%;
     -webkit-transform: rotate(360deg);

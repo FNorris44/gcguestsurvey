@@ -1,111 +1,25 @@
 (function ($) {
 	$.fn.fireworks = function() {
-    var fireworksField = this;
-    var SCREEN_WIDTH = window.innerWidth,
-        SCREEN_HEIGHT = window.innerHeight,
-        mousePos = {
-            x: 400,
-            y: 300
-        };
+    var fireworksField = this,
+        particles = [],
+        rockets = [],
+        MAX_PARTICLES = 400,
+        colorCode = 0,
+        SCREEN_WIDTH = $(fireworksField).width(),
+        SCREEN_HEIGHT = $(fireworksField).width();
 
-        // create canvas
-        var canvas = document.createElement('canvas');
-        canvas.id = 'fireworksField';
-    		canvas.width  = SCREEN_WIDTH;
-    		canvas.height = SCREEN_HEIGHT;
-    		canvas.style.position = 'absolute';
-    		canvas.style.top = '0px';
-    		canvas.style.left = '0px';
-        canvas.style.opacity = 0.4;
-        var context = canvas.getContext('2d');
-        var particles = [];
-        var rockets = [];
-        var MAX_PARTICLES = 400;
-        var colorCode = 0;
+    // create canvas and get the context
+    var canvas = document.createElement('canvas');
+    canvas.id = 'fireworksField';
+		canvas.width  = SCREEN_WIDTH;
+		canvas.height = SCREEN_HEIGHT;
+		canvas.style.position = 'absolute';
+		canvas.style.top = '0px';
+		canvas.style.left = '0px';
+    canvas.style.opacity = 0.4;
+    var context = canvas.getContext('2d');
 
-        $(fireworksField).append(canvas);
-        setInterval(launch, 800);
-        setInterval(loop, 1000 / 50);
-
-
-    function launch() {
-        launchFrom(SCREEN_WIDTH / 2);
-    }
-
-    function launchFrom(x) {
-        if (rockets.length < 10) {
-            var rocket = new Rocket(x);
-            rocket.explosionColor = Math.floor(Math.random() * 360 / 10) * 10;
-            rocket.vel.y = Math.random() * -3 - 4;
-            rocket.vel.x = Math.random() * 6 - 3;
-            rocket.size = 8;
-            rocket.shrink = 0.999;
-            rocket.gravity = 0.01;
-            rockets.push(rocket);
-        }
-    }
-
-    function loop() {
-        // update screen size
-        if (SCREEN_WIDTH != window.innerWidth) {
-            canvas.width = SCREEN_WIDTH = window.innerWidth;
-        }
-        if (SCREEN_HEIGHT != window.innerHeight) {
-            canvas.height = SCREEN_HEIGHT = window.innerHeight;
-        }
-
-        // clear canvas
-        context.fillStyle = "rgba(0, 0, 0, 0.05)";
-        context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-
-        var existingRockets = [];
-
-        for (var i = 0; i < rockets.length; i++) {
-            // update and render
-            rockets[i].update();
-            rockets[i].render(context);
-
-            // calculate distance with Pythagoras
-            var distance = Math.sqrt(Math.pow(mousePos.x - rockets[i].pos.x, 2) + Math.pow(mousePos.y - rockets[i].pos.y, 2));
-
-            // random chance of 1% if rockets is above the middle
-            var randomChance = rockets[i].pos.y < (SCREEN_HEIGHT * 2 / 3) ? (Math.random() * 100 <= 1) : false;
-
-    /* Explosion rules
-                 - 80% of screen
-                - going down
-                - close to the mouse
-                - 1% chance of random explosion
-            */
-            if (rockets[i].pos.y < SCREEN_HEIGHT / 5 || rockets[i].vel.y >= 0 || distance < 50 || randomChance) {
-                rockets[i].explode();
-            } else {
-                existingRockets.push(rockets[i]);
-            }
-        }
-
-        rockets = existingRockets;
-
-        var existingParticles = [];
-
-        for (var i = 0; i < particles.length; i++) {
-            particles[i].update();
-
-            // render and save particles that can be rendered
-            if (particles[i].exists()) {
-                particles[i].render(context);
-                existingParticles.push(particles[i]);
-            }
-        }
-
-        // update array with existing particles - old particles should be garbage collected
-        particles = existingParticles;
-
-        while (particles.length > MAX_PARTICLES) {
-            particles.shift();
-        }
-    }
-
+    // The Particles Object
     function Particle(pos) {
         this.pos = {
             x: pos ? pos.x : 0,
@@ -179,6 +93,7 @@
         return this.alpha >= 0.1 && this.size >= 1;
     };
 
+    // The Rocket Object
     function Rocket(x) {
         Particle.apply(this, [{
             x: x,
@@ -242,6 +157,89 @@
 
         c.restore();
     };
+
+    var loop = function() {
+        // update screen size
+        if (SCREEN_WIDTH != window.innerWidth) {
+            canvas.width = SCREEN_WIDTH = window.innerWidth;
+        }
+        if (SCREEN_HEIGHT != window.innerHeight) {
+            canvas.height = SCREEN_HEIGHT = window.innerHeight;
+        }
+
+        // clear canvas
+        context.fillStyle = "rgba(0, 0, 0, 0.05)";
+        context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+        var existingRockets = [];
+
+        for (var i = 0; i < rockets.length; i++) {
+            // update and render
+            rockets[i].update();
+            rockets[i].render(context);
+
+            // calculate distance with Pythagoras
+            var distance = Math.sqrt(Math.pow(SCREEN_WIDTH - rockets[i].pos.x, 2) + Math.pow(SCREEN_HEIGHT - rockets[i].pos.y, 2));
+
+            // random chance of 1% if rockets is above the middle
+            var randomChance = rockets[i].pos.y < (SCREEN_HEIGHT * 2 / 3) ? (Math.random() * 100 <= 1) : false;
+
+            /* Explosion rules
+                 - 80% of screen
+                - going down
+                - close to the mouse
+                - 1% chance of random explosion
+            */
+            if (rockets[i].pos.y < SCREEN_HEIGHT / 5 || rockets[i].vel.y >= 0 || distance < 50 || randomChance) {
+                rockets[i].explode();
+            } else {
+                existingRockets.push(rockets[i]);
+            }
+        }
+
+        rockets = existingRockets;
+
+        var existingParticles = [];
+
+        for (var i = 0; i < particles.length; i++) {
+            particles[i].update();
+
+            // render and save particles that can be rendered
+            if (particles[i].exists()) {
+                particles[i].render(context);
+                existingParticles.push(particles[i]);
+            }
+        }
+
+        // update array with existing particles - old particles should be garbage collected
+        particles = existingParticles;
+
+        while (particles.length > MAX_PARTICLES) {
+            particles.shift();
+        }
+    };
+
+    var launchFrom = function(x) {
+        if (rockets.length < 10) {
+            var rocket = new Rocket(x);
+            rocket.explosionColor = Math.floor(Math.random() * 360 / 10) * 10;
+            rocket.vel.y = Math.random() * -3 - 4;
+            rocket.vel.x = Math.random() * 6 - 3;
+            rocket.size = 8;
+            rocket.shrink = 0.999;
+            rocket.gravity = 0.01;
+            rockets.push(rocket);
+        }
+    };
+
+    var launch = function() {
+        launchFrom(SCREEN_WIDTH / 2);
+    }
+
+    // Append the canvas and start the loops
+    $(fireworksField).append(canvas);
+    setInterval(launch, 800);
+    setInterval(loop, 1000 / 50);
 
     return fireworksField;
   };
