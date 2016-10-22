@@ -44,6 +44,10 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'index'
   },
+  '/Owner': {
+    controller: 'CostOwnerController',
+    action: 'index'
+  },
   '/Survey': {
     controller: 'GuestSurveyController',
     action: 'index'
