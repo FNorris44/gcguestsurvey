@@ -79,12 +79,22 @@ $(document).ready(function(){
       q7 = (q1*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5)).toFixed(2);
       q8 = q4*(q3+q2);
       document.getElementById('survey6').innerHTML= q6;
-<<<<<<< HEAD
       document.getElementById('owner6').innerHTML = q7;
       document.getElementById('owner7').innerHTML = q8;
-=======
-      $('.pic-wrapper').fireworks();
->>>>>>> 59cff7c4e0c9a75a2b3cb6fd3d05b132a0d87d79
+
+      $("#resizer").width="300px";
+      $("#resizer").height="300px";
+      $("#gc1").toggleClass("newClass");
+      $("#gc1").toggleClass("surveytext");
+      $("#gc2").toggleClass("remixer");
+      $("#gc2").toggleClass("surveytext");
+      $("#gc3").toggleClass("remixer");
+      $("#gc3").toggleClass("surveytext");
+      $("#gc4").toggleClass("remixer");
+      $("#gc4").toggleClass("surveytext");
+      $("#gc5").toggleClass("remixer");
+      $("#gc5").toggleClass("surveytext");
+
     }
   });
 
