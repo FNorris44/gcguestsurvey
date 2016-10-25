@@ -1,50 +1,88 @@
 <div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
-      <form action="/Survey2" name="survey">
-        <div id="resizer">
-        <table>
-          <thead></thead>
-          <tbody>
-            <tr>
-              <td id="gc1" class="surveytext">How many people will vacation together?</td>
-              <td id="survey1" class="surveytext newClass setwidth"></td>
-            </tr>
+                  <table>
+                      <tr>
+                        <td id="gc1" class="surveytext">How many people will vacation together?</td>
+                      </tr>
+                      <tr>
+                        <td id="gc2" class="surveytext newClass">What will a hotel generally cost per night?</td>
+                      </tr>
+                      <tr>
+                        <td id="gc3" class="surveytext newClass">How many days do you vacation in a year?</td>
+                      </tr>
+                      <tr>
+                        <td id="gc4" class="surveytext newClass">How many years do you plan on vacationing?</td>
+                      </tr>
+                      <tr>
+                        <td id="gc5" class="surveytext newClass">What do you think inflation will be over 10 years?</td>
+                      </tr>
+                </table>
 
-            <tr>
-              <td id="gc2" class="surveytext newClass">What will a hotel generally cost per night?</td>
-              <td id="survey2"class="surveytext newClass setwidth"></td>
-            </tr>
+                <div id="reviewpanel">
+                <table>
+                    <thead></thead>
+                    <tbody>
+                      <tr>
+                        <td id="gs1" class="remixer"></td>
+                        <td id="survey1" class="surveytext setwidth"></td>
+                      </tr>
+                      <tr>
+                        <td id="gs2" class="remixer"></td>
+                        <td id="survey2"class="surveytext setwidth"></td>
+                      </tr>
+                      <tr>
+                        <td id="gs3" class="remixer"></td>
+                        <td id="survey3"  class="surveytext setwidth"></td>
+                      </tr>
+                      <tr>
+                        <td id="gs4" class="remixer"></td>
+                        <td id="survey4"  class="surveytext setwidth"></td>
+                      </tr>
+                      <tr>
+                        <td id="gs4" class="remixer"></td>
+                        <td id="survey4"  class="surveytext setwidth"></td>
+                      </tr>
+                      <tr>
+                        <td id="gs5" class="remixer"></td>
+                        <td id="survey5"  class="surveytext setwidth"></td>
+                      </tr>
+                    </tbody>
+                </table>
+              </div>
 
-            <tr>
-              <td id="gc3" class="surveytext newClass">How many days do you vacation in a year?</td>
-              <td id="survey3"  class="surveytext newClass setwidth"></td>
-            </tr>
+              <div id="reviewfinal">
+                <table>
+                  <tr>
+                    <td>Inflation: 0%</td>
+                  </tr>
+                  <tr>
+                    <td>Total Duration Cost: </td>
+                    <td id="totalcost"></td>
+                  </tr>
+                </table>
+              </div>
 
-            <tr>
-              <td id="gc4" class="surveytext newClass">How many years do you plan on vacationing?</td>
-              <td id="survey4"  class="surveytext newClass setwidth"></td>
-            </tr>
+              <div id="reviewfinal">
+                <table>
+                  <tr>
+                    <td id="inflationheader"></td>
+                  </tr>
+                  <tr>
+                    <td>Yearly Cost: </td>
+                    <td id="totalcost2"></td>
+                  </tr>
+                  <tr>
+                    <td>Inflation Cost: </td>
+                    <td id="totaldiff"></td>
+                  </tr>
+                  <tr>
+                    <td>Total Duration Cost: </td>
+                    <td id="totalinflation"></td>
+                  </tr>
+                </table>
+              </div>
 
-            <tr>
-              <td id="gc5" class="surveytext newClass">What do you think inflation will be over 10 years?</td>
-              <td id="survey5" class="surveytext newClass setwidth"></td>
-            </tr>
-
-            <tr>
-              <td></td>
-              <td id="answers" style="text-align: right;" class="surveytext newClass">---------</td>
-            </tr>
-
-            <tr>
-              <td id="surveydesc" class="surveytext newClass">Total Cost of Vacationing for the next 10 years:</td>
-              <td id="survey6" class="surveytext newClass"></td>
-            </tr>
-            <input class="permhidden" type="submit">
-          </tbody>
-      </table>
-    </div>
-    </form>
     <a id="trigger" href="#"><img class="thumbpic darken" src="/images/ThumbsUp.jpg"></a>
     <table class="surveykeys">
       <tr>

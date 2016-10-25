@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  var q1, q2, q3, q4, q5, q6, q7, q8;
+  var q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation, ownerexchange, vacadiff, vacanoinflation;
 
   $("#trigger").click(function() {
     if (!$('#gc1').hasClass("newClass")) {
@@ -8,6 +8,7 @@ $(document).ready(function(){
       $("#gc2").toggleClass("newClass");
       q1 = parseInt(document.getElementById('surveyvalue').value);
       document.getElementById("survey1").innerHTML = q1;
+      document.getElementById("gs1").innerHTML = document.getElementById("gc1").innerHTML;
       if ($('#gc1').hasClass("owner")) {
         $("#surveyvalue").val("75");
       }
@@ -19,6 +20,7 @@ $(document).ready(function(){
       $("#gc3").toggleClass("newClass");
       q2 = parseInt(document.getElementById('surveyvalue').value);
       document.getElementById('survey2').innerHTML= q2;
+      document.getElementById("gs2").innerHTML = document.getElementById("gc2").innerHTML;
       if ($('#gc1').hasClass("owner")) {
         $("#surveyvalue").val("75");
       }
@@ -30,6 +32,7 @@ $(document).ready(function(){
       $("#gc4").toggleClass("newClass");
       q3 = parseInt(document.getElementById('surveyvalue').value);
       document.getElementById('survey3').innerHTML= q3;
+      document.getElementById("gs3").innerHTML = document.getElementById("gc3").innerHTML;
       if ($('#gc1').hasClass("owner")) {
         $("#surveyvalue").val("10");
       }
@@ -41,6 +44,7 @@ $(document).ready(function(){
       $("#gc5").toggleClass("newClass");
       q4 = parseInt(document.getElementById('surveyvalue').value);
       document.getElementById('survey4').innerHTML= q4;
+      document.getElementById("gs4").innerHTML = document.getElementById("gc4").innerHTML;
       if ($('#gc1').hasClass("owner")) {
         $("#surveyvalue").val("5");
       }
@@ -49,38 +53,39 @@ $(document).ready(function(){
       }
     } else if (!$('#gc5').hasClass("newClass")) {
       $('.thumbpic').hide();
-
+      $("#gc5").toggleClass("newClass");
       q5 = parseInt(document.getElementById('surveyvalue').value);
+
       document.getElementById('survey5').innerHTML = q5;
+      document.getElementById("gs5").innerHTML = document.getElementById("gc5").innerHTML;
 
-      $("#gc1").toggleClass("newClass");
-      $("#gc6").toggleClass("newClass");
-      $("#gc2").toggleClass("newClass");
-      $("#gc3").toggleClass("newClass");
-      $("#gc4").toggleClass("newClass");
-
-      $("#survey1").toggleClass("newClass");
-      $("#survey2").toggleClass("newClass");
-      $("#survey3").toggleClass("newClass");
-      $("#survey4").toggleClass("newClass");
-      $("#survey5").toggleClass("newClass");
-      $("#survey6").toggleClass("newClass");
-      $("#owner6").toggleClass("newClass");
-      $("#owner7").toggleClass("newClass");
-
-      $("#answers").toggleClass("newClass");
       $("#trigger").toggleClass("newClass");
       $("#up").toggleClass("newClass");
       $("#down").toggleClass("newClass");
       $("#surveyvalue").toggleClass("newClass");
       $("#surveydesc").toggleClass("newClass");
       $("#surveydesd").toggleClass("newClass");
-      q6 = (Math.ceil(q1/2)*q2*q3*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5)).toFixed(2);
-      q7 = (q1*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5)).toFixed(2);
-      q8 = q4*(q3+q2);
-      document.getElementById('survey6').innerHTML= q6;
-      document.getElementById('owner6').innerHTML = q7;
-      document.getElementById('owner7').innerHTML = q8;
+
+      if ($('#gc1').hasClass("owner")) {
+        ownerinflation = parseInt(q1*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5));
+        ownerexchange = parseInt(q4*(q3+q2));
+        document.getElementById('ownermaintenance').innerHTML = '$' + ownerinflation.toString();
+        document.getElementById('ownerexchange').innerHTML = '$' + ownerexchange.toString();
+        document.getElementById('interestperyear').innerHTML = ' (+' + q5 + '% Increase per Year)';
+        document.getElementById('totalyears').innerHTML = ' (' + q4 + ' Years)';
+        document.getElementById('totalyears2').innerHTML = ' (' + q4 + ' Years)';
+        document.getElementById('totalowner').innerHTML = '$' + (ownerinflation + ownerexchange).toString();
+      }
+      else {
+        document.getElementById('inflationheader').innerHTML = 'Inflation: % ' + q5;
+        vacainflation = (Math.ceil(q1/2)*q2*q3*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5)).toFixed(2);
+        vacanoinflation = (Math.ceil(q1/2)*q2*q3*q4).toFixed(2);
+        vacadiff = vacainflation - vacanoinflation;
+        document.getElementById('totalcost').innerHTML = vacanoinflation;
+        document.getElementById('totalcost2').innerHTML = vacanoinflation;
+        document.getElementById('totaldiff').innerHTML = vacadiff;
+        document.getElementById('totalinflation').innerHTML = vacainflation;
+      }
 
       $('.pic-wrapper').fireworks({
         sound: false
