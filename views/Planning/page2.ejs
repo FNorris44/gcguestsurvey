@@ -36,21 +36,19 @@
   </div>
 
   <script language="JavaScript">
+    $(document).ready(function() {
+      var addComment = function() {
+    		var parameters = location.search.substring(1).split("&");
+        var temp = parameters[0].split("=");
+        var q1 = unescape(temp[1]);
+        temp = parameters[1].split("=");
 
-  	function addComment()
-  	{
-  		var parameters = location.search.substring(1).split("&");
-
-      var temp = parameters[0].split("=");
-      q1 = unescape(temp[1]);
-      temp = parameters[1].split("=");
-
-  		document.getElementById("planpic1").src = "images/" + q1 + "1.jpg";
-      document.getElementById("planpic2").src = "images/" + q1 + "2.jpg";
-      document.getElementById("planpic3").src = "images/" + q1 + "3.jpg";
-      document.getElementById("planpic4").src = "images/" + q1 + "4.jpg";
-      document.getElementById("planpic5").src = "images/" + q1 + "5.jpg";
-  	}
-  addComment();
-
+    		document.getElementById("planpic1").src = "images/" + q1 + "1.jpg";
+        document.getElementById("planpic2").src = "images/" + q1 + "2.jpg";
+        document.getElementById("planpic3").src = "images/" + q1 + "3.jpg";
+        document.getElementById("planpic4").src = "images/" + q1 + "4.jpg";
+        document.getElementById("planpic5").src = "images/" + q1 + "5.jpg";
+    	};
+      addComment();
+    });
   </script>

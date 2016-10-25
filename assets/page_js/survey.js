@@ -82,19 +82,9 @@ $(document).ready(function(){
       document.getElementById('owner6').innerHTML = q7;
       document.getElementById('owner7').innerHTML = q8;
 
-      $("#resizer").width="300px";
-      $("#resizer").height="300px";
-      $("#gc1").toggleClass("newClass");
-      $("#gc1").toggleClass("surveytext");
-      $("#gc2").toggleClass("remixer");
-      $("#gc2").toggleClass("surveytext");
-      $("#gc3").toggleClass("remixer");
-      $("#gc3").toggleClass("surveytext");
-      $("#gc4").toggleClass("remixer");
-      $("#gc4").toggleClass("surveytext");
-      $("#gc5").toggleClass("remixer");
-      $("#gc5").toggleClass("surveytext");
-
+      $('.pic-wrapper').fireworks({
+        sound: false
+      });
     }
   });
 
