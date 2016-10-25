@@ -9,7 +9,7 @@
     "jquery": "3.1.0",
     "bootstrap": "3.3.7",
     "datatables.net-bs": "1.10.11",
-    "jquery-fireworks": "1.0.0"
+    "jquery-fireworks": "1.0.1"
   },
   "license": "MIT",
   "homepage": "",
