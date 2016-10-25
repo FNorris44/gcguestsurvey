@@ -25,7 +25,7 @@ $(document).ready(function(){
       moveIt();
   };
 
-  centerIt($('.center-frame'));
+  //centerIt($('.center-frame'));
 
 var topleftit = function (el /* (jQuery element) Element to center */) {
     if (!el) {
@@ -39,7 +39,7 @@ var topleftit = function (el /* (jQuery element) Element to center */) {
     $(window).resize(moveIt);
     moveIt();
 };
-    topleftit($('.homeicon'));
+    //topleftit($('.homeicon'));
 
 
 

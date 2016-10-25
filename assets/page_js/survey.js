@@ -88,7 +88,8 @@ $(document).ready(function(){
       }
 
       $('.pic-wrapper').fireworks({
-        sound: false
+        sound: false,
+        opacity: 0.5
       });
     }
   });
