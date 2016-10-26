@@ -1,22 +1,22 @@
 <div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
-      <h1>Vacation Calculator</h1>
+      <h1>Owner Calculator</h1>
       <table id="questiontable">
         <tr>
-          <td id="gc1" class="surveytext">How many people will vacation together?</td>
+          <td id="gc1" class="surveytext owner">What are the yearly maintenance fees?</td>
         </tr>
         <tr>
-          <td id="gc2" class="surveytext">What will a hotel generally cost per night?</td>
+          <td id="gc2" class="surveytext ">What is your yearly exchange membership fee?</td>
         </tr>
         <tr>
-          <td id="gc3" class="surveytext">How many days do you vacation in a year?</td>
+          <td id="gc3" class="surveytext ">How much do you spend on exchange fees?</td>
         </tr>
         <tr>
-          <td id="gc4" class="surveytext">How many years do you plan on vacationing?</td>
+          <td id="gc4" class="surveytext ">How many years do you plan on traveling?</td>
         </tr>
         <tr>
-          <td id="gc5" class="surveytext">What do you think inflation will be over 10 years?</td>
+          <td id="gc5" class="surveytext ">How much will maintenance fees increase yearly?</td>
         </tr>
       </table>
 
@@ -53,40 +53,26 @@
     </div>
 
     <div id="reviewright" class"reviewowner">
-      <div class="numberno">
-        <h2>1</h2>
-      </div>
       <table>
         <tr>
-          <td class="basictext largetext">Inflation: </td>
-          <td id="ownermaintenance" class="bluetext largetext">0%</td>
+          <td class="largetext basictext">Annual Maintenance Fees: </td>
+          <td id="ownermaintenance" class="ownermoney largetext"></td>
+          <td id="totalyears" class="ownermoney largetext"></td>
         </tr>
         <tr>
-          <td class="basictext largetext">Total Duration Cost: </td>
-          <td id="totalcost" class="ownermoney largetext"></td>
-        </tr>
-      </table>
-    </div>
-    <div id="reviewright" class"reviewowner">
-      <div class="numberno">
-        <h2>2</h2>
-      </div>
-      <table>
-        <tr>
-          <td class="basictext largetext">Inflation: </td>
-          <td id="inflationheader" class="bluetext largetext">0%</td>
+          <td class="smalltext basictext" id="interestperyear"></td>
         </tr>
         <tr>
-          <td class="basictext largetext">Yearly Cost: </td>
-          <td id="totalcost2" class="bluetext largetext"></td>
+          <td class="largetext basictext smalldown">Exchange Fees: </td>
+          <td id="ownerexchange" class="ownermoney largetext smalldown"></td>
+          <td id="totalyears2" class="ownermoney largetext smalldown"></td>
         </tr>
         <tr>
-          <td class="basictext largetext">Inflation Cost: </td>
-          <td id="totaldiff" class="bluetext largetext"></td>
+          <td class="smalltext basictext">yearly and membership</td>
         </tr>
         <tr>
-          <td class="basictext largetext">Total Duration Cost: </td>
-          <td id="totalinflation" class="ownermoney largetext"></td>
+          <td class="supertext basictext largedown">Total Fees</td>
+          <td class="supertext ownermoney largedown" id="totalowner"></td>
         </tr>
       </table>
     </div>
@@ -100,7 +86,7 @@
       <tr>
         <td>
           <form>
-            <input id="surveyvalue" step=".5" type="number" value="2"><br>
+            <input id="surveyvalue" step=".5" type="number" value="300"><br>
           </form>
         </td>
       </tr>
@@ -110,6 +96,7 @@
     </table>
   </div>
 </div>
+
 
 <% block('localScripts', '<script src="/page_js/star-explosion.js"></script>') %>
 <% block('localScripts', '<script src="/page_js/fireworks.js"></script>') %>
