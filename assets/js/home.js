@@ -1,13 +1,5 @@
 $(document).ready(function(){
-/*
-    $('#trigger').click(function(){
-      if ((this).is(hover))
-      {
-        $('#gc1').toggleClass('newClass');
-        $('#gc2').toggleClass('newClass');
-      }
-    });
-*/
+
     var centerIt = function (el /* (jQuery element) Element to center */) {
       if (!el) {
       	return;

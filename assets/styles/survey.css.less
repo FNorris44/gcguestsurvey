@@ -1,8 +1,40 @@
 #divSurveyScreen {
+  width: 100vw;
+  height: 100vh;
+
   .homelink {
     padding: 15px 20px 15px 20px;
     float:left;
     text-align: center;
+  }
+
+  .center-frame {
+    width: 70%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+
+  #lnkHomeIcon {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  #divHomeLinks {
+    display: inline-block !important;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 
   #divWelcomeText {
@@ -174,7 +206,8 @@
   }
 
   img.subpic {
-    float: bottom;
+    /*float: bottom;*/
+    position: relative;
     height: 250px;
     width: 450px;
     border-radius: 175px;
