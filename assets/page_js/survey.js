@@ -71,7 +71,7 @@ $(document).ready(function(){
         document.getElementById('interestperyear').innerHTML = ' (+' + q5 + '% Increase per Year)';
         document.getElementById('totalyears').innerHTML = ' (' + q4 + ' Years)';
         document.getElementById('totalyears2').innerHTML = ' (' + q4 + ' Years)';
-        document.getElementById('totalowner').innerHTML = ('$' + (ownerinflation + ownerexchange).toString()).ToFixed(2);
+        document.getElementById('totalowner').innerHTML = '$' + ((ownerinflation + ownerexchange).ToFixed(2)).toString();
       }
       else {
         document.getElementById('inflationheader').innerHTML = q5;
