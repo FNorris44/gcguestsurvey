@@ -52,7 +52,8 @@ $(document).ready(function(){
         $("#surveyvalue").val("3");
       }
     } else if ($('#gc5').css('opacity') == 1) {
-      $('.thumbpic').hide();
+      $("#questiontable").toggleClass("deadClass");
+      $('.thumbpic').css({ opacity: 0 });
       $("#gc5").css({ opacity: 0 });
       q5 = parseInt(document.getElementById('surveyvalue').value);
 
@@ -61,17 +62,16 @@ $(document).ready(function(){
 
       $("#trigger,#up,#down,#surveyvalue,#surveydesd,#surveydesc").css({ opacity: 0 });
       $('#reviewbox,#gs1,#gs2,#gs3,#gs4,#gs5,#survey1,#survey2,#survey3,#survey4,#survey5').css({ opacity: 1 });
-      $("#questiontable").toggleClass("deadClass");
 
       if ($('#gc1').hasClass("owner")) {
         ownerinflation = (q1*(Math.pow((1+(.01*q5)),q4)-1)/(.01*q5));
         ownerexchange = (q4*(q3+q2));
-        document.getElementById('ownermaintenance').innerHTML = '$' + ownerinflation.toString();
+        document.getElementById('ownermaintenance').innerHTML = '$' + parseInt(ownerinflation).toString();
         document.getElementById('ownerexchange').innerHTML = '$' + ownerexchange.toString();
         document.getElementById('interestperyear').innerHTML = ' (+' + q5 + '% Increase per Year)';
         document.getElementById('totalyears').innerHTML = ' (' + q4 + ' Years)';
         document.getElementById('totalyears2').innerHTML = ' (' + q4 + ' Years)';
-        document.getElementById('totalowner').innerHTML = '$' + ((ownerinflation + ownerexchange).ToFixed(2)).toString();
+        document.getElementById('totalowner').innerHTML = '$' + (parseInt(ownerinflation + ownerexchange)).toString();
       }
       else {
         document.getElementById('inflationheader').innerHTML = q5;
