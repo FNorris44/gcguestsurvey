@@ -149,4 +149,55 @@ $(document).ready(function(){
         {document.getElementById("surveyvalue").stepDown(1);}
     }
   });
+
+  $("#Ireland").click(function() {
+    var clickid = jQuery(this).attr("id");
+    $("#destinationchoice").toggleClass("deadClass");
+    $("#reviewbox").css({ opacity: 1 });
+     document.getElementById("vacalocation").innerHTML = clickid.toString();
+
+    document.getElementById("planpic1").src = "images/" + clickid + "1.jpg";
+    document.getElementById("planpic2").src = "images/" + clickid + "2.jpg";
+    document.getElementById("planpic3").src = "images/" + clickid + "3.jpg";
+    document.getElementById("planpic4").src = "images/" + clickid + "4.jpg";
+    document.getElementById("planpic5").src = "images/" + clickid + "5.jpg";
+    });
+
+  $("#star2,#star3,#star4,#star5,#star6").click(function() {
+    var clickstar = jQuery(this).attr("id");
+    if (document.getElementById("#star2").src == '/images/emptystar.jpg') {
+      document.getElementById("#star2").src = "/images/fullstar.jpg";
+    }
+    else {
+      document.getElementById("#star3").src  = "/images/fullstar.jpg";
+    }
+    });
+
+    // $("#fiji").click(function() {
+    //   var clickid = jQuery(this).attr("id");
+    //   runreviewbox(clickid);
+    //   });
+    //
+    // $("#pr").click(function() {
+    //   var clickid = jQuery(this).attr("id");
+    //   runreviewbox(clickid);
+    //   });
+    //
+    // $("#hawaii").click(function() {
+    //   var clickid = jQuery(this).attr("id");
+    //   runreviewbox(clickid);
+    //   });
+
+      // function runreviewbox(cid) {
+      //   $("#destinationchoice").addClass('deadClass');
+      //   $("#reviewbox").css({ opacity: 1 });
+      //   document.getElementById("gs1").innerHTML = clickid.toString();
+      //
+      //
+      //   document.getElementById("planpic1").src = "images/" + cid + "1.jpg";
+      //   document.getElementById("planpic2").src = "images/" + cid + "2.jpg";
+      //   document.getElementById("planpic3").src = "images/" + cid + "3.jpg";
+      //   document.getElementById("planpic4").src = "images/" + cid + "4.jpg";
+      //   document.getElementById("planpic5").src = "images/" + cid + "5.jpg";
+      // };
 });
