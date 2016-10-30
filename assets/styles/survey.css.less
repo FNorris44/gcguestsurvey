@@ -71,7 +71,29 @@
     background-color: #00bfff;
     font-weight: bold;
     border-radius: 5px;
-    font-color: #ffffff;
+    color: #ffffff;
+  }
+
+  h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Geneva, serif;
+    text-shadow: 1px 1px #aaaaaa;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Geneva, serif;
+  }
+
+  h5 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Geneva, serif;
   }
 
   body {
@@ -96,16 +118,6 @@
     border-radius: 50px;
   }
 
-  .planlink {
-    margin: 0px 35px 25px 25px;
-    float:left;
-    text-align: center;
-    border: 1px #bbbbbb solid;
-    height: 350px;
-    width: 300px;
-    font-style: cursive cursive ariel;
-  }
-
   #reviewleft {
     opacity: 0.8;
     background-color: #0F315D;
@@ -118,6 +130,32 @@
     height: 70%;
   }
 
+  #reviewpic {
+    opacity: 0.8;
+    background-color: #cccccc;
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 20px 20px 20px;
+    width: 25%;
+    height: 400px;
+    float: left;
+    padding: 15px;
+  }
+
+  #reviewspecs {
+    opacity: 0.8;
+    background-color: #ffffff;
+    border: 1px #000000 solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+    width: 40%;
+    height: 400px;
+    float: left;
+    padding: 15px;
+  }
+
   #reviewright {
     opacity: 0.8;
     background-color: #000050;
@@ -127,13 +165,13 @@
     margin: 20px 20px 20px 45%;
     width: 50%;
     height: 70%;
-    font-color: #ffffff;
+    color: #ffffff;
   }
 
   #reviewfinal {
     background-color: #00bbee;
     border: 2px #00bbee solid;
-    font-color: #ffffff;
+    color: #ffffff;
     opacity: 0.8;
     background-color: #000050;
     border: 2px #000050 solid;
@@ -142,7 +180,7 @@
     margin: 20px 20px 20px 45%;
     width: 50%;
     height: 70%;
-    font-color: #ffffff;
+    color: #ffffff;
   }
 
   #reviewbox {
@@ -162,6 +200,14 @@
   .ownermoney {
     color: yellow;
     text-shadow: 2px 2px #000000;
+  }
+
+  .orangemoney {
+    color: #ee7600;
+  }
+
+  .blackmoney {
+    color: #ee7600;
   }
 
   .bluetext {
@@ -200,18 +246,29 @@
 
   .planpic {
     float: bottom;
-    height: 275px;
-    width: 290px;
+    height: 210px;
+    width: 240px;
     border: 1px black solid;
-    margin-left: -332px;
+    margin-left: -262px;
     margin-top: 15px;
+  }
+
+
+  .planlink {
+    margin: 0px 15px 25px 15px;
+    float:left;
+    text-align: center;
+    border: 1px #bbbbbb solid;
+    height: 275px;
+    width: 250px;
+    font-style: cursive cursive ariel;
   }
 
   img.subpic {
     /*float: bottom;*/
     position: relative;
     height: 250px;
-    width: 450px;
+    width: 350px;
     border-radius: 175px;
     -webkit-border-radius: 175px;
     -moz-border-radius: 175px;
@@ -237,17 +294,15 @@
     z-index:-1;
   }
 
-  #rotating-item-wrapper {
-      position: relative;
-      width: 980px;
-      height: 347px;
+  .qpolfix {
+    margin: 20px;
   }
 
   .rotating-item {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
+      // display: none;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
   }
 
   .thumbpic {
@@ -356,13 +411,18 @@
     margin-left: 10px;
   }
 
-  .Q-img {
-    width: 850px;
-    height: 490px;
-    position: absolute;
-    bottom: 0;
-    margin-top: -15px;
-    border-radius: 10px;
+  .starpowa {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    right: 0;
+  }
+
+  .Q-pol {
+    height: 210px;
+    width: 240px;
+    margin-left: 5px;
+    margin-top: 13px;
   }
 
   .right-text {

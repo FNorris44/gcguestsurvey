@@ -1,23 +1,24 @@
-<div class="homepage">
+  <div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
-    <table>
+    <h1>Star Credits</h1>
+    <table id="destinationchoice">
       <tr>
         <td class="tilt">
             <img class="planlink shadow" src="/images/polaroidireland.jpg">
-            <a href="Questionnare?loc=ireland&"><img class="planpic darken" src="/images/ireland1.jpg"></a>
+            <a id="Ireland" href="#"><img class="planpic darken" src="/images/ireland1.jpg"></a>
         </td>
         <td class="tilt">
             <img class="planlink shadow" src="/images/polaroidpr.jpg">
-            <a href="Questionnare?loc=pr&"><img class="planpic darken" src="/images/pr1.jpg"></a>
+            <div id="PR"><img class="planpic darken" src="/images/pr1.jpg"></div>
         </td>
         <td class="tilt">
             <img class="planlink shadow" src="/images/polaroidfiji.jpg">
-            <a href="Questionnare?loc=fiji&"><img class="planpic darken" src="/images/fiji1.jpg"></a>
+            <div id="Fiji"><img class="planpic darken" src="/images/fiji1.jpg"></div>
         </td>
         <td class="tilt">
             <img class="planlink shadow" src="/images/polaroidhawaii.jpg">
-            <a href="Questionnare?loc=hawaii&"><img class="planpic darken" src="/images/hawaii1.jpg"></a>
+            <div id="Hawaii"><img class="planpic darken" src="/images/hawaii1.jpg"></div>
         </td>
       </tr>
       <tr>
@@ -39,5 +40,70 @@
         </td>
       </tr>
     </table>
+
+      <div id="reviewbox">
+        <div id="reviewpic">
+          <h3>Vacation</h3>
+          <br>
+          <h4><div id="vacalocation"></div></h4>
+          <h5>7 Days - One Bedroom Condo</h5>
+          <img class="planlink shadow qpolfix" src="/images/polaroidireland.jpg">
+          <div id="rotating-item-wrapper" class="qpolfix">
+           <img id="planpic1" class="rotating-item Q-pol" src="images/ireland/p1.jpg"/>
+           <img id="planpic2" class="rotating-item Q-pol" src="images/ireland/p2.jpg"/>
+           <img id="planpic3" class="rotating-item Q-pol" src="images/ireland/p3.jpg"/>
+           <img id="planpic4" class="rotating-item Q-pol" src="images/ireland/p4.jpg"/>
+           <img id="planpic5" class="rotating-item Q-pol" src="images/ireland/p5.jpg"/>
+          </div>
+      </div>
+
+      <div id="reviewspecs" class"reviewowner">
+        <h3>Credits & Fees</h3>
+        <table>
+          <tr>
+            <td class="blacktext largetext">Processing Fee</td>
+            <td class="blacktext largetext">$189 +</td>
+            <td></td>
+            <td><img class="starpowa" src="/images/fullstar.jpg"></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">Non Continental Fee</td>
+            <td class="orangemoney largetext">$275 =</td>
+            <td></td>
+            <td><a href="#"><img id="star2" class="starpowa" src="/images/emptystar.jpg"></a></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">2-Bedroom Upgrade</td>
+            <td class="orangemoney largetext">$189 =</td>
+            <td></td>
+            <td><a href="#"><img id="star3" class="starpowa" src="/images/emptystar.jpg"></a></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">3-Bedroom Upgrade</td>
+            <td class="orangemoney largetext">$378 =</td>
+            <td><a id="star4" href="#"><img class="starpowa" src="/images/emptystar.jpg"></a></td>
+            <td><a id="star5" href="#"><img class="starpowa" src="/images/emptystar.jpg"></a></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">Peak Season Upgrade</td>
+            <td class="orangemoney largetext">$275 =</td>
+            <td></td>
+            <td><a id="star6" href="#"><img class="starpowa" src="/images/emptystar.jpg"></a></td>
+            <div id="startotals"></div>
+            <div id="startotal1"></div>
+            <div id="startotal2"></div>
+          </tr>
+          <!-- <tr>
+            <td><img style="width = 100%;" src="/images/line.jpg"></td>
+          </tr> -->
+        </table>
+
+      </div>
+
+    </div>
   </div>
 </div>
+
+<% block('localScripts', '<script src="/page_js/star-explosion.js"></script>') %>
+<% block('localScripts', '<script src="/page_js/fireworks.js"></script>') %>
+<% block('localScripts', '<script src="/page_js/survey.js"></script>') %>
