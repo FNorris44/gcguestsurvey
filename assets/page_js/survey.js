@@ -163,41 +163,67 @@ $(document).ready(function(){
     document.getElementById("planpic5").src = "images/" + clickid + "5.jpg";
     });
 
-  $("#star2,#star3,#star4,#star5,#star6").click(function() {
-    var clickstar = jQuery(this).attr("id");
-    if (document.getElementById("#star2").src == '/images/emptystar.jpg') {
-      document.getElementById("#star2").src = "/images/fullstar.jpg";
-    }
-    else {
-      document.getElementById("#star3").src  = "/images/fullstar.jpg";
-    }
+    $("#star2").click(function() {
+      if ($("#star2").attr('src') == 'images/emptystar.jpg') {
+        document.getElementById("star2").src = "images/fullstar.jpg";
+      }
+      else document.getElementById("star2").src = "images/emptystar.jpg";
+      checkstars();
     });
 
-    // $("#fiji").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
-    //
-    // $("#pr").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
-    //
-    // $("#hawaii").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
+    $("#star3").click(function() {
+      if ($("#star3").attr('src') == 'images/emptystar.jpg') {
+        if ($("#star4").attr('src') == 'images/emptystar.jpg') {
+          document.getElementById("star3").src = "images/fullstar.jpg";
+        }
+        else {
+          document.getElementById("star4").src = "images/emptystar.jpg";
+          document.getElementById("star5").src = "images/emptystar.jpg";
+          document.getElementById("star3").src = "images/fullstar.jpg";
+        }
+      }
+      else {
+        document.getElementById("star3").src = "images/emptystar.jpg";
+      }
+      checkstars();
+    });
 
-      // function runreviewbox(cid) {
-      //   $("#destinationchoice").addClass('deadClass');
-      //   $("#reviewbox").css({ opacity: 1 });
-      //   document.getElementById("gs1").innerHTML = clickid.toString();
-      //
-      //
-      //   document.getElementById("planpic1").src = "images/" + cid + "1.jpg";
-      //   document.getElementById("planpic2").src = "images/" + cid + "2.jpg";
-      //   document.getElementById("planpic3").src = "images/" + cid + "3.jpg";
-      //   document.getElementById("planpic4").src = "images/" + cid + "4.jpg";
-      //   document.getElementById("planpic5").src = "images/" + cid + "5.jpg";
-      // };
+    $("#star4, #star5").click(function() {
+      if ($("#star4").attr('src') == 'images/emptystar.jpg') {
+        if ($("#star3").attr('src') == 'images/emptystar.jpg') {
+          document.getElementById("star4").src = "images/fullstar.jpg";
+          document.getElementById("star5").src = "images/fullstar.jpg";
+        }
+        else {
+          document.getElementById("star4").src = "images/fullstar.jpg";
+          document.getElementById("star5").src = "images/fullstar.jpg";
+          document.getElementById("star3").src = "images/emptystar.jpg";
+        }
+      }
+      else {
+        document.getElementById("star4").src = "images/emptystar.jpg";
+        document.getElementById("star5").src = "images/emptystar.jpg";
+      }
+      checkstars();
+    });
+
+    $("#star6").click(function() {
+      if ($("#star6").attr('src') == 'images/emptystar.jpg') {
+        document.getElementById("star6").src = "images/fullstar.jpg";
+      }
+      else document.getElementById("star6").src = "images/emptystar.jpg";
+      checkstars();
+    });
+
+    function checkstars() {
+      var totstars = 1, starplural;
+      if ($("#star2").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star3").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star4").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star5").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star6").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if (totstars > 1) {starplural = 'Stars'} else {starplural = 'Star'}
+
+      document.getElementById("startotals").innerHTML = "$189 + " + totstars + " " + starplural;
+    }
 });
