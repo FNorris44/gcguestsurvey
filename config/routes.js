@@ -36,8 +36,8 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'SurveyHome'
   },
-  '/about': {
-    controller: 'AboutController',
+  '/ExpressWays': {
+    controller: 'ExpressWaysController',
     action: 'index'
   },
   '/SurveyHome': {

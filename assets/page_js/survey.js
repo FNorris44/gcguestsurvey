@@ -2,6 +2,66 @@ $(document).ready(function(){
   $("#gc1").css({ opacity: 1 });
   var q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation, ownerexchange, vacadiff, vacanoinflation;
 
+  if ($('#destinationchoice').hasClass("express")) {
+    var today = new Date();
+    var sixd = new Date();
+    var sevend = new Date();
+    var thirteend = new Date();
+    var fourteend = new Date();
+    var twentyd = new Date();
+    var twentyeightd = new Date();
+    var thirtyfod = new Date();
+    var fofid = new Date();
+    var fioned = new Date();
+    sixd.setDate(today.getDate()+6);
+    sevend.setDate(today.getDate()+7);
+    thirteend.setDate(today.getDate()+13);
+    fourteend.setDate(today.getDate()+14);
+    twentyd.setDate(today.getDate()+20);
+    twentyeightd.setDate(today.getDate()+28);
+    thirtyfod.setDate(today.getDate()+34);
+    fofid.setDate(today.getDate()+45);
+    fioned.setDate(today.getDate()+51);
+
+    document.getElementById("date1").innerHTML = (formatdate(today) + " - " + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById("date2").innerHTML = (formatdate(today) + " - " + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById("date3").innerHTML = (formatdate(sevend) + " - " + formatdate(thirteend)).replace(/,/g, '');
+    document.getElementById("date4").innerHTML = (formatdate(fourteend) + " - " + formatdate(twentyd)).replace(/,/g, '');
+    document.getElementById("date5").innerHTML = (formatdate(twentyeightd) + " - " + formatdate(thirtyfod)).replace(/,/g, '');
+    document.getElementById("date6").innerHTML = (formatdate(fofid) + " - " + formatdate(fioned)).replace(/,/g, '');
+
+  function formatdate(init) {
+    thingy = new Date(init).toLocaleDateString('en-GB', {
+      day : 'numeric',
+      month : 'short',
+      weekday : "short",
+      }).split(' ').join(' ');
+      return thingy;
+    }
+  }
+
+
+  $(document).keydown(function (event) {
+          if (event.ctrlKey == true && (event.which == '107' || event.which == '109' || event.which == '187' || event.which == '189'))
+           {
+               event.preventDefault();
+           }
+       });
+
+           $(window).bind('mousewheel DOMMouseScroll', function (event) {
+               if (event.ctrlKey == true) {
+                   event.preventDefault();
+               }
+
+      });
+
+  $(document).keydown(function(event) {
+    if (event.ctrlKey==true && (event.which == '107' || event.which == '109')) {
+        alert('disabling zooming ! ');
+        event.preventDefault();
+     }
+   });
+
   $("#trigger").click(function() {
     if ($('#gc1').css('opacity') == 1) {
       $("#gc1").css({ opacity: 0 });
@@ -163,41 +223,67 @@ $(document).ready(function(){
     document.getElementById("planpic5").src = "images/" + clickid + "5.jpg";
     });
 
-  $("#star2,#star3,#star4,#star5,#star6").click(function() {
-    var clickstar = jQuery(this).attr("id");
-    if (document.getElementById("#star2").src == '/images/emptystar.jpg') {
-      document.getElementById("#star2").src = "/images/fullstar.jpg";
-    }
-    else {
-      document.getElementById("#star3").src  = "/images/fullstar.jpg";
-    }
+    $("#star2").click(function() {
+      if ($("#star2").attr('src') == 'images/emptystar.jpg') {
+        document.getElementById("star2").src = "images/fullstar.jpg";
+      }
+      else document.getElementById("star2").src = "images/emptystar.jpg";
+      checkstars();
     });
 
-    // $("#fiji").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
-    //
-    // $("#pr").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
-    //
-    // $("#hawaii").click(function() {
-    //   var clickid = jQuery(this).attr("id");
-    //   runreviewbox(clickid);
-    //   });
+    $("#star3").click(function() {
+      if ($("#star3").attr('src') == 'images/emptystar.jpg') {
+        if ($("#star4").attr('src') == 'images/emptystar.jpg') {
+          document.getElementById("star3").src = "images/fullstar.jpg";
+        }
+        else {
+          document.getElementById("star4").src = "images/emptystar.jpg";
+          document.getElementById("star5").src = "images/emptystar.jpg";
+          document.getElementById("star3").src = "images/fullstar.jpg";
+        }
+      }
+      else {
+        document.getElementById("star3").src = "images/emptystar.jpg";
+      }
+      checkstars();
+    });
 
-      // function runreviewbox(cid) {
-      //   $("#destinationchoice").addClass('deadClass');
-      //   $("#reviewbox").css({ opacity: 1 });
-      //   document.getElementById("gs1").innerHTML = clickid.toString();
-      //
-      //
-      //   document.getElementById("planpic1").src = "images/" + cid + "1.jpg";
-      //   document.getElementById("planpic2").src = "images/" + cid + "2.jpg";
-      //   document.getElementById("planpic3").src = "images/" + cid + "3.jpg";
-      //   document.getElementById("planpic4").src = "images/" + cid + "4.jpg";
-      //   document.getElementById("planpic5").src = "images/" + cid + "5.jpg";
-      // };
+    $("#star4, #star5").click(function() {
+      if ($("#star4").attr('src') == 'images/emptystar.jpg') {
+        if ($("#star3").attr('src') == 'images/emptystar.jpg') {
+          document.getElementById("star4").src = "images/fullstar.jpg";
+          document.getElementById("star5").src = "images/fullstar.jpg";
+        }
+        else {
+          document.getElementById("star4").src = "images/fullstar.jpg";
+          document.getElementById("star5").src = "images/fullstar.jpg";
+          document.getElementById("star3").src = "images/emptystar.jpg";
+        }
+      }
+      else {
+        document.getElementById("star4").src = "images/emptystar.jpg";
+        document.getElementById("star5").src = "images/emptystar.jpg";
+      }
+      checkstars();
+    });
+
+    $("#star6").click(function() {
+      if ($("#star6").attr('src') == 'images/emptystar.jpg') {
+        document.getElementById("star6").src = "images/fullstar.jpg";
+      }
+      else document.getElementById("star6").src = "images/emptystar.jpg";
+      checkstars();
+    });
+
+    function checkstars() {
+      var totstars = 1, starplural;
+      if ($("#star2").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star3").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star4").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star5").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if ($("#star6").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
+      if (totstars > 1) {starplural = 'Stars'} else {starplural = 'Star'}
+
+      document.getElementById("startotals").innerHTML = "$189 + " + totstars + " " + starplural;
+    }
 });
