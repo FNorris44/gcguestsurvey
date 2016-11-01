@@ -96,6 +96,22 @@
     font-family: Verdana, Geneva, serif;
   }
 
+  .expbig {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Geneva, serif;
+    text-shadow: 1px 1px #aaaaaa;
+  }
+
+  .expmed {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    font-family: Verdana, Geneva, serif;
+    text-shadow: 1px 1px #aaaaaa;
+  }
+
   body {
     margin: auto;
     position: absolute;
@@ -104,6 +120,9 @@
     z-index: 0;
     font-family: Verdana, Geneva, serif;
     text-shadow: 2px 2px #000000;
+    -moz-transform: scale(1.25, 1.25);
+    zoom: 1.25;
+    zoom: 125%;
   }
 
   .numberno {
@@ -152,6 +171,20 @@
     margin: 20px 20px 20px 20px;
     width: 22%;
     height: 400px;
+    float: left;
+    padding: 15px;
+    position: relative;
+  }
+
+  #reviewexpress {
+    opacity: 0.8;
+    background-color: #FFFF88;
+    border: 1px #eeaa77 solid;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 60px 10px 20px 10px;
+    width: 30%;
+    height: 300px;
     float: left;
     padding: 15px;
     position: relative;
@@ -224,6 +257,10 @@
     margin: 5px;
   }
 
+  .expressheight {
+    height: 50px;
+  }
+
   .bookington {
     height: 180px;
     border: 3px solid #eeaa77;
@@ -252,7 +289,7 @@
   }
 
   .blackmoney {
-    color: #ee7600;
+    color: #000000;
   }
 
   .bluetext {
@@ -271,8 +308,21 @@
   }
 
   .supertext {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
+    font-family: Verdana, Geneva, serif;
+  }
+
+  .expresssmall {
+    font-size: 27px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, serif;
+  }
+
+  .expresstext {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, serif;
   }
 
   .smalltext {
@@ -348,6 +398,46 @@
       // position: absolute;
       // top: 0;
       // left: 0;
+  }
+
+  .expressright {
+    float: right;
+    margin-right: 10px;
+    margin-top: -220px;
+    text-align: center;
+  }
+
+  .flotbot {
+    float: bottom;
+    text-align: center;
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .italic {
+    font-style: italic;
+    text-shadow: 2px 2px #888888;
+  }
+
+  .expresspic {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 1px solid #000000;
+  }
+
+  .spread {
+    margin: 40px;
+  }
+
+  .sixth {
+    width: 445px;
+    height: 260px;
+    background-color: #dddddd;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin: 7px;
   }
 
   .thumbpic {
@@ -476,6 +566,14 @@
 
   .right-text {
     text-align: right;
+  }
+
+  .centertext {
+    text-align: center;
+  }
+
+  #bottomtext {
+    float: bottom;
   }
 
   form {
