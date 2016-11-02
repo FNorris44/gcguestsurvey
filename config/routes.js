@@ -36,10 +36,10 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'SurveyHome'
   },
-  '/ExpressWays': {
+  /*'/ExpressWays': {
     controller: 'ExpressWaysController',
     action: 'index'
-  },
+  },*/
   '/SurveyHome': {
     controller: 'HomeController',
     action: 'index'
