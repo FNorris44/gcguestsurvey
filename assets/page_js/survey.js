@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  var location, totescost, roomcount;
+  var starz = 6;
+  var vacas = 1;
+
   $("#gc1").css({ opacity: 1 });
   var q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation, ownerexchange, vacadiff, vacanoinflation;
 
@@ -61,6 +65,63 @@ $(document).ready(function(){
         event.preventDefault();
      }
    });
+
+  $("#reviewexpressa").click(function() {
+     starz -= 1;
+     totescost = 388/7;
+     starzee(starz);
+ });
+
+ $("#reviewexpressb").click(function() {
+    starz -= 2;
+    totescost = 189/7;
+    starzee(starz);
+});
+
+  function starzee(init) {
+    if (starz < 1) {document.getElementById("starz1").src = "images/emptystar.jpg";}
+    if (starz < 2) {document.getElementById("starz2").src = "images/emptystar.jpg";}
+    if (starz < 3) {document.getElementById("starz3").src = "images/emptystar.jpg";}
+    if (starz < 4) {document.getElementById("starz4").src = "images/emptystar.jpg";}
+    if (starz < 5) {document.getElementById("starz5").src = "images/emptystar.jpg";}
+    if (starz < 6) {document.getElementById("starz6").src = "images/emptystar.jpg";}
+
+    $("#reviewbox").toggleClass("deadClass");
+    $("#reviewcongrats").toggleClass("deadClass");
+
+    if (location == 'Ireland') {
+      roomcount = 2;
+    }
+    else if (location == 'Orlando') {
+      roomcount = 2;
+    }
+    else if (location == 'StAugustine') {
+      roomcount = 3;
+    }
+    else {
+      roomcount = 1;
+    }
+
+    document.getElementById("congratsloca").innerHTML = location;
+    document.getElementById("congratslocb").innerHTML = location + " for 7 Days - " + roomcount + " BedRoom Condo";
+    document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
+
+    if (starz == 0) {
+      document.getElementById("mostars").innerHTML = "You just booked " + vacas + " vacations for only 6 stars!";
+      $("#booknew").toggleClass("deadClass");
+    }
+
+    $('.pic-wrapper').fireworks({
+      sound: false,
+      opacity: 0.5
+    });
+  }
+
+  $("#booknew").click(function() {
+    $("#destinationchoice").toggleClass("deadClass");
+    $("#reviewcongrats").toggleClass("deadClass");
+    vacas += 1;
+  });
 
   $("#trigger").click(function() {
     if ($('#gc1').css('opacity') == 1) {
@@ -210,18 +271,56 @@ $(document).ready(function(){
     }
   });
 
-  $("#Ireland").click(function() {
-    var clickid = jQuery(this).attr("id");
-    $("#destinationchoice").toggleClass("deadClass");
-    $("#reviewbox").css({ opacity: 1 });
-     document.getElementById("vacalocation").innerHTML = clickid.toString();
+  function revertdead() {
+    if ($('#reviewbox').hasClass("deadClass")) {
+      $("#reviewbox").toggleClass("deadClass");
+    }
+  }
 
-    document.getElementById("planpic1").src = "images/" + clickid + "1.jpg";
-    document.getElementById("planpic2").src = "images/" + clickid + "2.jpg";
-    document.getElementById("planpic3").src = "images/" + clickid + "3.jpg";
-    document.getElementById("planpic4").src = "images/" + clickid + "4.jpg";
-    document.getElementById("planpic5").src = "images/" + clickid + "5.jpg";
+  $("#Ireland").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
     });
+  $("#Orlando").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+  $("#Fiji").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+  $("#StAugustine").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+  $("#MyrtleBeach").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+  $("#Italy").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+
+    function fiximages(init) {
+      $("#destinationchoice").toggleClass("deadClass");
+      $("#reviewbox").css({ opacity: 1 });
+
+      document.getElementById("vacalocation").innerHTML = init.toString();
+
+      document.getElementById("polaroidpic").src = "images/polaroid" + init + ".jpg";
+      document.getElementById("planpic1").src = "images/" + init + "1.jpg";
+      document.getElementById("planpic2").src = "images/" + init + "2.jpg";
+      document.getElementById("planpic3").src = "images/" + init + "3.jpg";
+      document.getElementById("planpic4").src = "images/" + init + "4.jpg";
+      document.getElementById("planpic5").src = "images/" + init + "5.jpg";
+    }
 
     $("#star2").click(function() {
       if ($("#star2").attr('src') == 'images/emptystar.jpg') {
