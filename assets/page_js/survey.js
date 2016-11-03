@@ -2,6 +2,7 @@ $(document).ready(function(){
   var location, totescost, roomcount;
   var starz = 6;
   var vacas = 1;
+  var totstars = 1;
 
   $("#gc1").css({ opacity: 1 });
   var q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation, ownerexchange, vacadiff, vacanoinflation;
@@ -65,6 +66,11 @@ $(document).ready(function(){
         event.preventDefault();
      }
    });
+ $("#reviewbook").click(function() {
+    starz -= totstars;
+    totescost = 189/7;
+    starzee(starz);
+  });
 
   $("#reviewexpressa").click(function() {
      starz -= 1;
@@ -102,11 +108,20 @@ $(document).ready(function(){
       roomcount = 1;
     }
 
+  if ($("#destinationchoice").hasClass("express")) {
     document.getElementById("congratsloca").innerHTML = location;
     document.getElementById("congratslocb").innerHTML = location + " for 7 Days - " + roomcount + " BedRoom Condo";
     document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
+  }
 
-    if (starz == 0) {
+  if ($("#destinationchoice").hasClass("planning")) {
+    document.getElementById("congratsloca").innerHTML = location;
+    document.getElementById("congratslocb").innerHTML = location;
+    document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
+    document.getElementById("moztars").innerHTML = totstars;
+  }
+
+    if (starz < 1) {
       document.getElementById("mostars").innerHTML = "You just booked " + vacas + " vacations for only 6 stars!";
       $("#booknew").toggleClass("deadClass");
     }
@@ -307,6 +322,17 @@ $(document).ready(function(){
     fiximages(location);
     revertdead();
     });
+  $("#Hawaii").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+  $("#Daytona").click(function() {
+    location = jQuery(this).attr("id");
+    fiximages(location);
+    revertdead();
+    });
+
 
     function fiximages(init) {
       $("#destinationchoice").toggleClass("deadClass");
@@ -375,14 +401,16 @@ $(document).ready(function(){
     });
 
     function checkstars() {
-      var totstars = 1, starplural;
-      if ($("#star2").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
-      if ($("#star3").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
-      if ($("#star4").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
-      if ($("#star5").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
-      if ($("#star6").attr('src') == 'images/fullstar.jpg') {totstars += 1;}
-      if (totstars > 1) {starplural = 'Stars'} else {starplural = 'Star'}
+      var creditstars = 1;
+      var starplural;
+      if ($("#star2").attr('src') == 'images/fullstar.jpg') {creditstars += 1;}
+      if ($("#star3").attr('src') == 'images/fullstar.jpg') {creditstars += 1;}
+      if ($("#star4").attr('src') == 'images/fullstar.jpg') {creditstars += 1;}
+      if ($("#star5").attr('src') == 'images/fullstar.jpg') {creditstars += 1;}
+      if ($("#star6").attr('src') == 'images/fullstar.jpg') {creditstars += 1;}
+      if (creditstars > 1) {starplural = 'Stars'} else {starplural = 'Star'}
 
-      document.getElementById("startotals").innerHTML = "$189 + " + totstars + " " + starplural;
+      document.getElementById("startotals").innerHTML = "$189 + " + creditstars + " " + starplural;
+      totstars = creditstars;
     }
 });
