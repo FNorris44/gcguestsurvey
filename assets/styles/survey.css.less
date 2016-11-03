@@ -1,6 +1,7 @@
 #divSurveyScreen {
   width: 100vw;
   height: 100vh;
+}
 
   .homelink {
     padding: 15px 20px 15px 20px;
@@ -142,9 +143,6 @@
     z-index: 0;
     font-family: Verdana, Geneva, serif;
     text-shadow: 2px 2px #000000;
-    -moz-transform: scale(1.25, 1.25);
-    zoom: 1.25;
-    zoom: 125%;
   }
 
   .numberno {
@@ -168,9 +166,8 @@
   }
 
   #reviewcongrats {
-    //opacity: 0;
     text-align: center;
-    -webkit-transition-delay: 2s; /* Safari */
+    -webkit-transition-delay: 2s;
     transition-delay: 2s;
     -webkit-transition: opacity 2s ease-in;
        -moz-transition: opacity 2s ease-in;
@@ -435,12 +432,12 @@
 
   .planlink {
     margin: 0px 15px 25px 15px;
-    float:left;
+    float: left;
     text-align: center;
     border: 1px #bbbbbb solid;
     height: 275px;
     width: 250px;
-    font-style: cursive cursive ariel;
+    font-style: italic;
   }
 
   img.subpic {
@@ -475,13 +472,6 @@
 
   .qpolfix {
     margin: 20px;
-  }
-
-  .rotating-item {
-      // display: none;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
   }
 
   .expressright {
@@ -573,7 +563,6 @@
   #surveyvalue {
     font-size: 30px;
     width: 100px;
-    float:center;
     text-align: center;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -733,11 +722,9 @@
   }
 
   .spin:hover {
-    radius-border: 25%;
     -webkit-transform: rotate(360deg);
        -moz-transform: rotate(360deg);
          -o-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
