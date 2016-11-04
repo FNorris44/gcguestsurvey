@@ -48,6 +48,33 @@ module.exports.http = {
     //   '500'
     // ],
 
+    order: [
+    'startRequestTimer',
+    'cookieParser',
+    'session',
+    'passportInit',
+    'passportSession',
+    'myRequestLogger',
+    'bodyParser',
+    'handleBodyParserError',
+    'compress',
+    'methodOverride',
+    'poweredBy',
+    'nocache',
+    'router',
+    'www',
+    'favicon',
+    '404',
+    '500'
+  ],
+
+  nocache: function(req, res, next) {
+    res.header("Cache-Control", "private, no-cache, no-store, must-revalidate");
+    res.header("Expires", "-1");
+    res.header("Pragma", "no-cache");
+    return next();
+  }
+
   /****************************************************************************
   *                                                                           *
   * Example custom middleware; logs each request to the console.              *
