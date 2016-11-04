@@ -350,17 +350,18 @@ $(document).ready(function(){
 
 
     function fiximages(init) {
+      init = init.toLowerCase();
       $("#destinationchoice").toggleClass("deadClass");
       $("#reviewbox").css({ opacity: 1 });
 
       document.getElementById("vacalocation").innerHTML = init.toString();
 
-      document.getElementById("polaroidpic").src = "images/polaroid" + init + ".jpg";
-      document.getElementById("planpic1").src = "images/" + init + "1.jpg";
-      document.getElementById("planpic2").src = "images/" + init + "2.jpg";
-      document.getElementById("planpic3").src = "images/" + init + "3.jpg";
-      document.getElementById("planpic4").src = "images/" + init + "4.jpg";
-      document.getElementById("planpic5").src = "images/" + init + "5.jpg";
+      document.getElementById("polaroidpic").src = "/images/polaroid" + init + ".jpg";
+      document.getElementById("planpic1").src = "/images/" + init + "1.jpg";
+      document.getElementById("planpic2").src = "/images/" + init + "2.jpg";
+      document.getElementById("planpic3").src = "/images/" + init + "3.jpg";
+      document.getElementById("planpic4").src = "/images/" + init + "4.jpg";
+      document.getElementById("planpic5").src = "/images/" + init + "5.jpg";
     }
 
     $("#star2").click(function() {
