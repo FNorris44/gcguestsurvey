@@ -60,7 +60,7 @@ module.exports.http = {
     'compress',
     'methodOverride',
     'poweredBy',
-    'nocache',
+    //'nocache',
     'router',
     'www',
     'favicon',

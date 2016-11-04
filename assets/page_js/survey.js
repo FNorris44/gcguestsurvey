@@ -1,38 +1,16 @@
 $(document).ready(function(){
-  var location;
-  var totescost;
-  var roomcount;
-  var starz = 6;
-  var vacas = 1;
-  var totstars = 1;
+  var location, totescost, roomcount, starz = 6, vacas = 1, totstars = 1,
+      q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation,
+      ownerexchange, vacadiff,vacanoinflation;
 
   $("#gc1").css({ opacity: 1 });
-  var q1;
-  var q2;
-  var q3;
-  var q4;
-  var q5;
-  var q6;
-  var q7;
-  var q8;
-  var q9;
-  var vacainflation;
-  var ownerinflation;
-  var ownerexchange;
-  var vacadiff;
-  var vacanoinflation;
 
   if ($("#destinationchoice").hasClass("express")) {
-    var today = new Date();
-    var sixd = new Date();
-    var sevend = new Date();
-    var thirteend = new Date();
-    var fourteend = new Date();
-    var twentyd = new Date();
-    var twentyeightd = new Date();
-    var thirtyfod = new Date();
-    var fofid = new Date();
-    var fioned = new Date();
+    var today = new Date(), sixd = new Date(), sevend = new Date(),
+        thirteend = new Date(), fourteend = new Date(), twentyd = new Date(),
+        twentyeightd = new Date(), thirtyfod = new Date(), fofid = new Date(),
+        fioned = new Date();
+
     sixd.setDate(today.getDate()+6);
     sevend.setDate(today.getDate()+7);
     thirteend.setDate(today.getDate()+13);
@@ -43,45 +21,43 @@ $(document).ready(function(){
     fofid.setDate(today.getDate()+45);
     fioned.setDate(today.getDate()+51);
 
-    document.getElementById("date1").innerHTML = (formatdate(today) + " - " + formatdate(sixd)).replace(/,/g, "");
-    document.getElementById("date2").innerHTML = (formatdate(today) + " - " + formatdate(sixd)).replace(/,/g, "");
-    document.getElementById("date3").innerHTML = (formatdate(sevend) + " - " + formatdate(thirteend)).replace(/,/g, "");
-    document.getElementById("date4").innerHTML = (formatdate(fourteend) + " - " + formatdate(twentyd)).replace(/,/g, "");
-    document.getElementById("date5").innerHTML = (formatdate(twentyeightd) + " - " + formatdate(thirtyfod)).replace(/,/g, "");
-    document.getElementById("date6").innerHTML = (formatdate(fofid) + " - " + formatdate(fioned)).replace(/,/g, "");
+    document.getElementById('date1').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById('date2').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById('date3').innerHTML = (formatdate(sevend) + ' - ' + formatdate(thirteend)).replace(/,/g, '');
+    document.getElementById('date4').innerHTML = (formatdate(fourteend) + ' - ' + formatdate(twentyd)).replace(/,/g, '');
+    document.getElementById('date5').innerHTML = (formatdate(twentyeightd) + ' - ' + formatdate(thirtyfod)).replace(/,/g, '');
+    document.getElementById('date6').innerHTML = (formatdate(fofid) + ' - ' + formatdate(fioned)).replace(/,/g, '');
 
   function formatdate(init) {
-    thingy = new Date(init).toLocaleDateString("en-GB", {
-      day : "numeric",
-      month : "short",
-      weekday : "short",
-      }).split(" ").join(" ");
+    var thingy = new Date(init).toLocaleDateString('en-GB', {
+      day : 'numeric',
+      month : 'short',
+      weekday : 'short',
+    }).split(' ').join(' ');
       return thingy;
     }
   }
 
-
   $(document).keydown(function (event) {
-          if (event.ctrlKey == true && (event.which == "107" || event.which == "109" || event.which == "187" || event.which == "189"))
-           {
-               event.preventDefault();
-           }
-       });
+    if (event.ctrlKey == true && (event.which == "107" || event.which == "109" || event.which == "187" || event.which == "189")) {
+       event.preventDefault();
+    }
+  });
 
-           $(window).bind("mousewheel DOMMouseScroll", function (event) {
-               if (event.ctrlKey == true) {
-                   event.preventDefault();
-               }
-
-      });
+  $(window).bind("mousewheel DOMMouseScroll", function (event) {
+    if (event.ctrlKey == true) {
+      event.preventDefault();
+    }
+  });
 
   $(document).keydown(function(event) {
-    if (event.ctrlKey==true && (event.which == "107" || event.which == "109")) {
-        alert("disabling zooming ! ");
+    if ((event.ctrlKey === true) && ((event.which === '107') || (event.which === '109'))) {
+        alert("disabling zooming!");
         event.preventDefault();
      }
    });
- $("#reviewbook").click(function() {
+
+  $("#reviewbook").click(function() {
     starz -= totstars;
     totescost = 189/7;
     starzee(starz);
@@ -91,24 +67,28 @@ $(document).ready(function(){
      starz -= 1;
      totescost = 388/7;
      starzee(starz);
- });
+  });
 
- $("#reviewexpressb").click(function() {
+  $("#reviewexpressb").click(function() {
     starz -= 2;
     totescost = 189/7;
     starzee(starz);
-});
+  });
 
   function starzee(init) {
-    if (starz < 1) {document.getElementById("starz1").src = "images/emptystar.jpg";}
-    if (starz < 2) {document.getElementById("starz2").src = "images/emptystar.jpg";}
-    if (starz < 3) {document.getElementById("starz3").src = "images/emptystar.jpg";}
-    if (starz < 4) {document.getElementById("starz4").src = "images/emptystar.jpg";}
-    if (starz < 5) {document.getElementById("starz5").src = "images/emptystar.jpg";}
-    if (starz < 6) {document.getElementById("starz6").src = "images/emptystar.jpg";}
+    if (starz < 1) {document.getElementById("starz1").src = "/images/emptystar.jpg";}
+    if (starz < 2) {document.getElementById("starz2").src = "/images/emptystar.jpg";}
+    if (starz < 3) {document.getElementById("starz3").src = "/images/emptystar.jpg";}
+    if (starz < 4) {document.getElementById("starz4").src = "/images/emptystar.jpg";}
+    if (starz < 5) {document.getElementById("starz5").src = "/images/emptystar.jpg";}
+    if (starz < 6) {document.getElementById("starz6").src = "/images/emptystar.jpg";}
 
-    $("#reviewbox").toggleClass("deadClass");
-    $("#reviewcongrats").toggleClass("deadClass");
+    //for (var i=0; i<starz; i++) {
+    //  $('#starz' + (i+1).toString()).attr('src', '/images/emptystar.jpg')
+    //}
+
+    $('#reviewbox').toggleClass('deadClass');
+    $('#reviewcongrats').toggleClass('deadClass');
 
     if (location == "Ireland") {
       roomcount = 2;
@@ -365,65 +345,65 @@ $(document).ready(function(){
     }
 
     $("#star2").click(function() {
-      if ($("#star2").attr("src") == "images/emptystar.jpg") {
-        document.getElementById("star2").src = "images/fullstar.jpg";
+      if ($("#star2").attr("src") == "/images/emptystar.jpg") {
+        document.getElementById("star2").src = "/images/fullstar.jpg";
       }
-      else document.getElementById("star2").src = "images/emptystar.jpg";
+      else document.getElementById("star2").src = "/images/emptystar.jpg";
       checkstars();
     });
 
     $("#star3").click(function() {
-      if ($("#star3").attr("src") == "images/emptystar.jpg") {
-        if ($("#star4").attr("src") == "images/emptystar.jpg") {
-          document.getElementById("star3").src = "images/fullstar.jpg";
+      if ($("#star3").attr("src") == "/images/emptystar.jpg") {
+        if ($("#star4").attr("src") == "/images/emptystar.jpg") {
+          document.getElementById("star3").src = "/images/fullstar.jpg";
         }
         else {
-          document.getElementById("star4").src = "images/emptystar.jpg";
-          document.getElementById("star5").src = "images/emptystar.jpg";
-          document.getElementById("star3").src = "images/fullstar.jpg";
+          document.getElementById("star4").src = "/images/emptystar.jpg";
+          document.getElementById("star5").src = "/images/emptystar.jpg";
+          document.getElementById("star3").src = "/images/fullstar.jpg";
         }
       }
       else {
-        document.getElementById("star3").src = "images/emptystar.jpg";
+        document.getElementById("star3").src = "/images/emptystar.jpg";
       }
       checkstars();
     });
 
     $("#star4, #star5").click(function() {
-      if ($("#star4").attr("src") == "images/emptystar.jpg") {
-        if ($("#star3").attr("src") == "images/emptystar.jpg") {
-          document.getElementById("star4").src = "images/fullstar.jpg";
-          document.getElementById("star5").src = "images/fullstar.jpg";
+      if ($("#star4").attr("src") == "/images/emptystar.jpg") {
+        if ($("#star3").attr("src") == "/images/emptystar.jpg") {
+          document.getElementById("star4").src = "/images/fullstar.jpg";
+          document.getElementById("star5").src = "/images/fullstar.jpg";
         }
         else {
-          document.getElementById("star4").src = "images/fullstar.jpg";
-          document.getElementById("star5").src = "images/fullstar.jpg";
-          document.getElementById("star3").src = "images/emptystar.jpg";
+          document.getElementById("star4").src = "/images/fullstar.jpg";
+          document.getElementById("star5").src = "/images/fullstar.jpg";
+          document.getElementById("star3").src = "/images/emptystar.jpg";
         }
       }
       else {
-        document.getElementById("star4").src = "images/emptystar.jpg";
-        document.getElementById("star5").src = "images/emptystar.jpg";
+        document.getElementById("star4").src = "/images/emptystar.jpg";
+        document.getElementById("star5").src = "/images/emptystar.jpg";
       }
       checkstars();
     });
 
     $("#star6").click(function() {
-      if ($("#star6").attr("src") == "images/emptystar.jpg") {
-        document.getElementById("star6").src = "images/fullstar.jpg";
+      if ($("#star6").attr("src") == "/images/emptystar.jpg") {
+        document.getElementById("star6").src = "/images/fullstar.jpg";
       }
-      else document.getElementById("star6").src = "images/emptystar.jpg";
+      else document.getElementById("star6").src = "/images/emptystar.jpg";
       checkstars();
     });
 
     function checkstars() {
       var creditstars = 1;
       var starplural;
-      if ($("#star2").attr("src") == "images/fullstar.jpg") {creditstars += 1;}
-      if ($("#star3").attr("src") == "images/fullstar.jpg") {creditstars += 1;}
-      if ($("#star4").attr("src") == "images/fullstar.jpg") {creditstars += 1;}
-      if ($("#star5").attr("src") == "images/fullstar.jpg") {creditstars += 1;}
-      if ($("#star6").attr("src") == "images/fullstar.jpg") {creditstars += 1;}
+      if ($("#star2").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+      if ($("#star3").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+      if ($("#star4").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+      if ($("#star5").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+      if ($("#star6").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
       if (creditstars > 1) {starplural = "Stars"} else {starplural = "Star"}
 
       document.getElementById("startotals").innerHTML = "$189 + " + creditstars + " " + starplural;
