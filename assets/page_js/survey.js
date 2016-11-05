@@ -83,31 +83,27 @@ $(document).ready(function(){
     if (starz < 5) {document.getElementById("starz5").src = "/images/emptystar.jpg";}
     if (starz < 6) {document.getElementById("starz6").src = "/images/emptystar.jpg";}
 
-    //for (var i=0; i<starz; i++) {
-    //  $('#starz' + (i+1).toString()).attr('src', '/images/emptystar.jpg')
-    //}
-
     $('#reviewbox').toggleClass('deadClass');
     $('#reviewcongrats').toggleClass('deadClass');
 
-    if (location == "Ireland") {
-      roomcount = 2;
-    }
-    else if (location == "Orlando") {
-      roomcount = 2;
-    }
-    else if (location == "StAugustine") {
-      roomcount = 3;
-    }
-    else {
-      roomcount = 1;
+    switch(location) {
+      case 'Ireland':
+      case 'Orlando':
+        roomcount = 2;
+        break;
+      case 'StAugustine' :
+        roomcount = 3;
+        break;
+      default:
+        roomcount = 1;
+        break;
     }
 
-  if ($("#destinationchoice").hasClass("express")) {
-    document.getElementById("congratsloca").innerHTML = location;
-    document.getElementById("congratslocb").innerHTML = location + " for 7 Days - " + roomcount + " BedRoom Condo";
-    document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
-  }
+    if ($("#destinationchoice").hasClass("express")) {
+      document.getElementById("congratsloca").innerHTML = location;
+      document.getElementById("congratslocb").innerHTML = location + " for 7 Days - " + roomcount + " BedRoom Condo";
+      document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
+    }
 
   if ($("#destinationchoice").hasClass("planning")) {
     document.getElementById("congratsloca").innerHTML = location;
