@@ -36,6 +36,7 @@ module.exports.routes = {
     controller: 'HomeController',
     action: 'SurveyHome'
   },
+  /*
   '/ExpressWays': {
     controller: 'ExpressWaysController',
     action: 'index'
@@ -60,7 +61,7 @@ module.exports.routes = {
     controller: 'PlanningController',
     action: 'page2'
   }
-
+  */
 
   /***************************************************************************
   *                                                                          *
