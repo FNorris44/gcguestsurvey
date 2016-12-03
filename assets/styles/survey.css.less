@@ -649,34 +649,6 @@ max-width: 100%;
     margin: 7px;
   }
 
-  .thumbpic {
-    border-radius: 25px;
-    height: 15%;
-    width: 25%;
-    position: absolute;
-    bottom: 70px;
-    right: 10px;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-  }
-
-  .thumbpic:hover {
-    margin-right: 20px;
-  }
-
-  .surveykeys {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    bottom: 0px;
-    right: 80px;
-    /*top: 50%;
-    left: 60%;*/
-  }
-
   .newClass {visibility: hidden}
 
   .deadClass {display:none}
@@ -871,5 +843,40 @@ max-width: 100%;
          -o-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+
+  #divDisplayButtons {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 250px;
+
+    #trigger {
+      width: 100px;
+    }
+
+    .surveykeys {
+      height: 200px;
+      width: 100px;
+    }
+
+    .thumbpic {
+      border-radius: 25px;
+      height: 25%;
+      width: 45%;
+      position: absolute;
+      bottom: 70px;
+      right: 10px;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    .thumbpic:hover {
+      margin-right: 20px;
+    }
   }
 }
