@@ -37,25 +37,25 @@ $(document).ready(function(){
       return thingy;
     }
   }
-
-  $(document).keydown(function (event) {
-    if (event.ctrlKey == true && (event.which == "107" || event.which == "109" || event.which == "187" || event.which == "189")) {
-       event.preventDefault();
-    }
-  });
-
-  $(window).bind("mousewheel DOMMouseScroll", function (event) {
-    if (event.ctrlKey == true) {
-      event.preventDefault();
-    }
-  });
-
-  $(document).keydown(function(event) {
-    if ((event.ctrlKey === true) && ((event.which === '107') || (event.which === '109'))) {
-        alert("disabling zooming!");
-        event.preventDefault();
-     }
-   });
+  //
+  // $(document).keydown(function (event) {
+  //   if (event.ctrlKey == true && (event.which == "107" || event.which == "109" || event.which == "187" || event.which == "189")) {
+  //      event.preventDefault();
+  //   }
+  // });
+  //
+  // $(window).bind("mousewheel DOMMouseScroll", function (event) {
+  //   if (event.ctrlKey == true) {
+  //     event.preventDefault();
+  //   }
+  // });
+  //
+  // $(document).keydown(function(event) {
+  //   if ((event.ctrlKey === true) && ((event.which === '107') || (event.which === '109'))) {
+  //       alert("disabling zooming!");
+  //       event.preventDefault();
+  //    }
+  //  });
 
   $("#reviewbook").click(function() {
     starz -= totstars;
@@ -222,12 +222,12 @@ $(document).ready(function(){
   $("#up").click(function() {
     if ($("#gc1").css("opacity") == 1) {
       if ($("#gc1").hasClass("owner"))
-        {document.getElementById("surveyvalue").stepUp(10)}
+        {document.getElementById("surveyvalue").stepUp(100)}
       else
         {document.getElementById("surveyvalue").stepUp(2);}
     } else if ($("#gc2").css("opacity") == 1) {
       if ($("#gc1").hasClass("owner"))
-        {document.getElementById("surveyvalue").stepUp(10)}
+        {document.getElementById("surveyvalue").stepUp(50)}
       else
         {document.getElementById("surveyvalue").stepUp(10);}
     } else if ($("#gc3").css("opacity") == 1) {
@@ -251,12 +251,12 @@ $(document).ready(function(){
   $("#down").click(function() {
     if ($("#gc1").css("opacity") == 1) {
       if ($("#gc1").hasClass("owner"))
-        {document.getElementById("surveyvalue").stepDown(10)}
+        {document.getElementById("surveyvalue").stepDown(100)}
       else
         {document.getElementById("surveyvalue").stepDown(2);}
     } else if ($("#gc2").css("opacity") == 1) {
       if ($("#gc1").hasClass("owner"))
-        {document.getElementById("surveyvalue").stepDown(10)}
+        {document.getElementById("surveyvalue").stepDown(50)}
       else
         {document.getElementById("surveyvalue").stepDown(10);}
     } else if ($("#gc3").css("opacity") == 1) {
@@ -327,17 +327,17 @@ $(document).ready(function(){
 
     function fiximages(init) {
       init = init.toLowerCase();
-      $("#destinationchoice").toggleClass("deadClass");
+      $("#destinationchoice").addClass("deadClass");
       $("#reviewbox").css({ opacity: 1 });
 
       document.getElementById("vacalocation").innerHTML = init.toString();
 
-      document.getElementById("polaroidpic").src = "/images/polaroid" + init + ".jpg";
-      document.getElementById("planpic1").src = "/images/" + init + "1.jpg";
-      document.getElementById("planpic2").src = "/images/" + init + "2.jpg";
-      document.getElementById("planpic3").src = "/images/" + init + "3.jpg";
-      document.getElementById("planpic4").src = "/images/" + init + "4.jpg";
-      document.getElementById("planpic5").src = "/images/" + init + "5.jpg";
+      // document.getElementById("polaroidpic").src = "/images/polaroid" + init + ".jpg";
+      document.getElementById("planpic1").src = "/images/polaroid" + init + "1.jpg";
+      document.getElementById("planpic2").src = "/images/polaroid" + init + "2.jpg";
+      document.getElementById("planpic3").src = "/images/polaroid" + init + "3.jpg";
+      document.getElementById("planpic4").src = "/images/polaroid" + init + "4.jpg";
+      document.getElementById("planpic5").src = "/images/polaroid" + init + "5.jpg";
     }
 
     $("#star2").click(function() {
