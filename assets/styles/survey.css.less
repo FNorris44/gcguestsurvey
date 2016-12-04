@@ -3,79 +3,8 @@
   height: 100vh;
   overflow: hidden;
 
-  .corner-ribbon{
-    width: 200px;
-    background: #e43;
-    position: absolute;
-    top: 25px;
-    left: -50px;
-    text-align: center;
-    line-height: 50px;
-    letter-spacing: 1px;
-    color: #f0f0f0;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-/* Custom styles */
-
-.corner-ribbon.sticky{
-  position: fixed;
-}
-
-.corner-ribbon.shadow{
-  box-shadow: 0 0 3px rgba(0,0,0,.3);
-}
-
-/* Different positions */
-
-.corner-ribbon.top-left{
-  top: 25px;
-  left: -50px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.corner-ribbon.top-right{
-  top: 25px;
-  right: -50px;
-  left: auto;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.corner-ribbon.bottom-left{
-  top: auto;
-  bottom: 25px;
-  left: -50px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
-.corner-ribbon.bottom-right{
-  top: auto;
-  right: -50px;
-  bottom: 25px;
-  left: auto;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-/* Colors */
-
-.corner-ribbon.white{background: #f0f0f0; color: #555;}
-.corner-ribbon.black{background: #333;}
-.corner-ribbon.grey{background: #999;}
-.corner-ribbon.blue{background: #39d;}
-.corner-ribbon.green{background: #2c7;}
-.corner-ribbon.turquoise{background: #1b9;}
-.corner-ribbon.purple{background: #95b;}
-.corner-ribbon.red{background: #e43;}
-.corner-ribbon.orange{background: #e82;}
-.corner-ribbon.yellow{background: #ec0;}
-
   .divHomeLinks {
-    float:left;
+    float: left;
     opacity: 0.7;
     width: 44%;
     height: 39%;
@@ -120,24 +49,6 @@
     opacity: 0.7;
   }
 
-  // #divHomeLinks {
-  //   display: inline-block !important;
-  //   margin: auto;
-  //   position: absolute;
-  //   width: auto;
-  //   left:0;
-  //   right: 0;
-  //   top: 0;
-  //   bottom: 0;
-  //   overflow: auto;
-  // }
-
-  // .homelink img{
-  //   width: 100%;
-  //   height: 100%;
-  //   border-radius: 25px;
-  // }
-
   .content-pane {
     display: inline-block !important;
     margin: auto;
@@ -148,7 +59,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    overflow: auto;
+    overflow: visible;
   }
 
   #divWelcomeText {
@@ -273,6 +184,8 @@
 
   .starremaining {
     float: left;
+    font-size: 2.5em;
+    font-weight: bold;
   }
 
   .starright {
@@ -280,6 +193,7 @@
   }
 
   #reviewcongrats {
+    display: none;
     text-align: center;
     -webkit-transition-delay: 2s;
     transition-delay: 2s;
@@ -291,7 +205,7 @@
   }
 
   #starloc {
-    height: 50px;
+    height: 65px;
     border: 4px #0088bb solid;
     border-radius: 10px;
     width: 650px;
@@ -316,15 +230,16 @@
 
   #reviewpic {
     opacity: 0.8;
+    position: relative;
     background-color: #cccccc;
     border: 1px #000000 solid;
     border-radius: 10px;
     padding: 10px;
     margin: 20px 20px 20px 20px;
     width: 25%;
-    height: 400px;
+    height: 450px;
     float: left;
-    padding: 15px;
+    padding: 10px;
   }
 
   #reviewbook {
@@ -336,34 +251,6 @@
     margin: 20px 20px 20px 20px;
     width: 22%;
     height: 400px;
-    float: left;
-    padding: 15px;
-    position: relative;
-  }
-
-  #reviewexpressa {
-    opacity: 0.8;
-    background-color: #FFFF88;
-    border: 1px #eeaa77 solid;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 60px 10px 20px 10px;
-    width: 30%;
-    height: 300px;
-    float: left;
-    padding: 15px;
-    position: relative;
-  }
-
-  #reviewexpressb {
-    opacity: 0.8;
-    background-color: #FFFF88;
-    border: 1px #eeaa77 solid;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 60px 10px 20px 10px;
-    width: 30%;
-    height: 300px;
     float: left;
     padding: 15px;
     position: relative;
@@ -424,20 +311,6 @@
     width: 50%;
     height: 70%;
     color: #ffffff;
-  }
-
-  #reviewbox {
-    opacity: 0;
-    margin-top: 5%;
-    border: 1px #444444 dashed;
-    background-color: rgba(44, 44, 44, 0.4);
-    -webkit-transition-delay: 2s; /* Safari */
-    transition-delay: 2s;
-    -webkit-transition: opacity 2s ease-in;
-       -moz-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-         -o-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
   }
 
   #startotals {
@@ -536,8 +409,8 @@
 
   #destinationchoice {
     display: inline-block !important;
-    width: 100%;
-    overflow: hidden;
+    width: 99%;
+    overflow: visible;
   }
 
   #ione {
@@ -566,7 +439,7 @@
 
   .planlink img {
     max-height: 100%;
-max-width: 100%;
+    max-width: 100%;
   }
 
   .planpic {
@@ -641,8 +514,8 @@ max-width: 100%;
   }
 
   .sixth {
-    width: 445px;
-    height: 260px;
+    width: 425px;
+    height: 250px;
     background-color: #dddddd;
     border-radius: 5px;
     border: 1px solid #000000;
@@ -843,6 +716,69 @@ max-width: 100%;
          -o-transform: rotate(360deg);
         -ms-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+
+  #divExpressWeek {
+
+    #divExpressSelection {
+
+    }
+
+    #reviewbox {
+      position: relative;
+      display: none;
+      margin-top: 5px;
+      overflow: visible;
+      height: auto;
+      -webkit-transition-delay: 2s; /* Safari */
+      transition-delay: 2s;
+      -webkit-transition: opacity 2s ease-in;
+         -moz-transition: opacity 2s ease-in;
+          -ms-transition: opacity 2s ease-in;
+           -o-transition: opacity 2s ease-in;
+              transition: opacity 2s ease-in;
+    }
+
+    #reviewexpressa {
+      opacity: 0.8;
+      background-color: #FFFF88;
+      border: 1px #eeaa77 solid;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 60px 10px 20px 10px;
+      width: 30%;
+      float: left;
+      padding: 15px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #reviewexpressb {
+      opacity: 0.8;
+      background-color: #FFFF88;
+      border: 1px #eeaa77 solid;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 60px 10px 20px 10px;
+      width: 30%;
+      float: left;
+      padding: 15px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    #btnBack {
+      display: none;
+      margin-left: 20px;
+    }
+
+    .express-destination {
+      cursor: pointer;
+    }
+
+    #divCongratsModal {
+      z-index: 5;
+    }
   }
 
   #divDisplayButtons {
