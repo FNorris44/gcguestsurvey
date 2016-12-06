@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  var location = $('#location').val();
+  var location;
   var vacas = 1;
   var starz = 6;
   var totstars = 1;
   var totescost = parseInt(189/7);
+  var starplural;
 
   function topstars() {
     if (starz < 1) {
@@ -27,7 +28,7 @@ $(document).ready(function() {
     $('#vacalocation').html(destination);
 
     // Set the location
-    $('#location').val(destination);
+    location = destination;
 
     // Fade out then fade in
     $('#divExpressSelection').fadeOut().next().delay(250);
@@ -47,6 +48,8 @@ $(document).ready(function() {
       var destination = $(this).data('destination');
       fixImages(destination);
       $('#btnBack').show();
+      document.getElementById("congratsloca").innerHTML = destination;
+      document.getElementById("congratslocb").innerHTML = destination;
     });
 
     $('#btnBack').click(function () {
@@ -63,10 +66,9 @@ $(document).ready(function() {
       $('#reviewcongrats').show();
       starz -= totstars;
       topstars();
-      document.getElementById("congratsloca").innerHTML = location;
-      document.getElementById("congratslocb").innerHTML = location;
+
       document.getElementById("congratsprice").innerHTML = totescost;
-      document.getElementById("moztars").innerHTML = totstars;
+      document.getElementById("moztars").innerHTML = totstars + " " + starplural;
 
       $('.pic-wrapper').fireworks({
         sound: false,
@@ -128,7 +130,7 @@ $(document).ready(function() {
 
   function checkstars() {
     var creditstars = 1;
-    var starplural;
+
     if ($("#star2").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
     if ($("#star3").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
     if ($("#star4").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
@@ -137,6 +139,7 @@ $(document).ready(function() {
     if (creditstars > 1) {starplural = "Stars"} else {starplural = "Star"}
 
     document.getElementById("startotals").innerHTML = "$189 + " + creditstars + " " + starplural;
+
     totstars = creditstars;
   }
 });
