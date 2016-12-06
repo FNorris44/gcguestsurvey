@@ -7,8 +7,12 @@ $(document).ready(function() {
       var vacas = $('#vacas').val();
       var totescost = parseInt($('#totescost').val(), 10);
       var roomcount;
+      var vacas = 1;
 
-      if (starz < 1) {document.getElementById('starz1').src = '/images/emptystar.jpg';}
+      if (starz < 1) {
+        document.getElementById('starz1').src = '/images/emptystar.jpg';
+        $("#btnBack").css({ opacity: 0 });
+      }
       if (starz < 2) {document.getElementById('starz2').src = '/images/emptystar.jpg';}
       if (starz < 3) {document.getElementById('starz3').src = '/images/emptystar.jpg';}
       if (starz < 4) {document.getElementById('starz4').src = '/images/emptystar.jpg';}
@@ -34,19 +38,12 @@ $(document).ready(function() {
         document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
       }
 
-      if ($("#destinationchoice").hasClass("planning")) {
-        document.getElementById("congratsloca").innerHTML = location;
-        document.getElementById("congratslocb").innerHTML = location;
-        document.getElementById("congratsprice").innerHTML = totescost;
-        document.getElementById("moztars").innerHTML = totstars;
-      }
-
       if (starz < 1) {
         document.getElementById("mostars").innerHTML = "You just booked " + vacas + " vacations for only 6 stars!";
         $("#booknew").toggleClass("deadClass");
       }
 
-      $('#reviewbox').hide();
+      $('#reviewboxe').hide();
       $('#reviewcongrats').show();
 
       $('.pic-wrapper').fireworks({
@@ -54,6 +51,44 @@ $(document).ready(function() {
         opacity: 0.5
       });
     };
+
+    /////////////////////////
+    /////--Date Stuff--//////
+    /////////////////////////
+    var today = new Date(), sixd = new Date(), sevend = new Date(),
+        thirteend = new Date(), fourteend = new Date(), twentyd = new Date(),
+        twentyeightd = new Date(), thirtyfod = new Date(), fofid = new Date(),
+        fioned = new Date();
+
+    sixd.setDate(today.getDate()+6);
+    sevend.setDate(today.getDate()+7);
+    thirteend.setDate(today.getDate()+13);
+    fourteend.setDate(today.getDate()+14);
+    twentyd.setDate(today.getDate()+20);
+    twentyeightd.setDate(today.getDate()+28);
+    thirtyfod.setDate(today.getDate()+34);
+    fofid.setDate(today.getDate()+45);
+    fioned.setDate(today.getDate()+51);
+
+    document.getElementById('date1').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById('date2').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+    document.getElementById('date3').innerHTML = (formatdate(sevend) + ' - ' + formatdate(thirteend)).replace(/,/g, '');
+    document.getElementById('date4').innerHTML = (formatdate(fourteend) + ' - ' + formatdate(twentyd)).replace(/,/g, '');
+    document.getElementById('date5').innerHTML = (formatdate(twentyeightd) + ' - ' + formatdate(thirtyfod)).replace(/,/g, '');
+    document.getElementById('date6').innerHTML = (formatdate(fofid) + ' - ' + formatdate(fioned)).replace(/,/g, '');
+
+  function formatdate(init) {
+    var thingy = new Date(init).toLocaleDateString('en-GB', {
+      day : 'numeric',
+      month : 'short',
+      weekday : 'short',
+    }).split(' ').join(' ');
+      return thingy;
+    }
+
+    /////////////////////////////
+    /////--End Date Stuff--//////
+    /////////////////////////////
 
     var fixImages = function(destination) {
       // Set the text
@@ -64,7 +99,7 @@ $(document).ready(function() {
 
       // Fade out then fade in
       $('#divExpressSelection').fadeOut().next().delay(250);
-      $('#reviewbox').fadeIn();
+      $('#reviewboxe').fadeIn();
 
       // Set the pictures
       destination = destination.toLowerCase().replace(' ', '');
@@ -86,8 +121,9 @@ $(document).ready(function() {
       $('#fireworksField').remove();
       $(this).hide();
       $('#reviewcongrats').hide();
-      $('#reviewbox').fadeOut().next().delay(250);
+      $('#reviewboxe').fadeOut().next().delay(250);
       $('#divExpressSelection').fadeIn();
+      vacas += 1;
     });
 
     $('#reviewbook').click(function() {

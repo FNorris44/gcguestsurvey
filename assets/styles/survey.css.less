@@ -208,7 +208,7 @@
     height: 65px;
     border: 4px #0088bb solid;
     border-radius: 10px;
-    width: 650px;
+    width: 665px;
     background-color: #ffffff;
     margin-left: auto;
     margin-top: 10px;
@@ -279,7 +279,7 @@
     border-radius: 10px;
     padding: 10px;
     margin: 20px 0px 20px 0px;
-    width: 37%;
+    width: 43%;
     height: 400px;
     float: left;
     padding: 15px;
@@ -432,8 +432,8 @@
     font-style: italic;
     opacity: 0.7;
     display: inline-block !important;
-    width: 18%;
-    margin: 0% 7% 2% 7%;
+    width: 17%;
+    margin: 0% 7% 1% 7%;
     display: flex;
   }
 
@@ -502,11 +502,16 @@
   }
 
   .expresspic {
-    width: 200px;
-    height: 200px;
+    width: 45%;
+    height: 80%;
     margin-top: 10px;
     margin-left: 10px;
     border: 1px solid #000000;
+    overflow: hidden;
+  }
+
+  .expresspic img {
+    width: 100%;
   }
 
   .spread {
@@ -514,12 +519,13 @@
   }
 
   .sixth {
-    width: 425px;
-    height: 250px;
+    width: 96%;
+    height: 92%;
     background-color: #dddddd;
     border-radius: 5px;
     border: 1px solid #000000;
-    margin: 7px;
+    margin: 4%;
+    display: inline-block;
   }
 
   .newClass {visibility: hidden}
@@ -527,31 +533,6 @@
   .deadClass {display:none}
 
   .permhidden {visibility: hidden}
-
-  .arrow {
-    border-radius: 50%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-  }
-
-  .arrow:hover {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-  }
-
-  #surveyvalue {
-    font-size: 30px;
-    width: 100px;
-    text-align: center;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-  }
 
   .hiddentext{
     font-size: 35px;
@@ -718,25 +699,46 @@
             transform: rotate(360deg);
   }
 
+  #reviewright td {
+    margin-left: 5px;
+  }
+
+  #reviewbox {
+    position: relative;
+    opacity: 0;
+    //display: none;
+    margin-top: 5px;
+    overflow: visible;
+    height: auto;
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+  }
+
+  #reviewboxe {
+    position: relative;
+    //opacity: 0;
+    display: none;
+    margin-top: 5px;
+    overflow: visible;
+    height: auto;
+    -webkit-transition-delay: 2s; /* Safari */
+    transition-delay: 2s;
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+  }
+
   #divExpressWeek {
 
     #divExpressSelection {
 
-    }
-
-    #reviewbox {
-      position: relative;
-      display: none;
-      margin-top: 5px;
-      overflow: visible;
-      height: auto;
-      -webkit-transition-delay: 2s; /* Safari */
-      transition-delay: 2s;
-      -webkit-transition: opacity 2s ease-in;
-         -moz-transition: opacity 2s ease-in;
-          -ms-transition: opacity 2s ease-in;
-           -o-transition: opacity 2s ease-in;
-              transition: opacity 2s ease-in;
     }
 
     #reviewexpressa {
@@ -746,7 +748,7 @@
       border-radius: 10px;
       padding: 30px;
       margin: 60px 10px 20px 10px;
-      width: 30%;
+      width: 33%;
       float: left;
       padding: 15px;
       position: relative;
@@ -760,7 +762,7 @@
       border-radius: 10px;
       padding: 30px;
       margin: 60px 10px 20px 10px;
-      width: 30%;
+      width: 33%;
       float: left;
       padding: 15px;
       position: relative;
@@ -781,29 +783,73 @@
     }
   }
 
+  .arrow {
+    width: 25%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  .arrow:hover {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+  }
+
   #divDisplayButtons {
+    background: #ffffff url("/images/signback.jpg") no-repeat right top;
+    background-size: cover;
     display: inline-block;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 250px;
-
-    #trigger {
-      width: 100px;
-    }
+    right: 30%;
+    width: 45%;
+    height: 40%;
+    bottom: 7%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 
     .surveykeys {
-      height: 200px;
-      width: 100px;
+      height: 90%;
+      width: 100%;
+      margin: 2% 0% 2% 10%;
+    }
+
+    #surveyvalue {
+      font-size: .7em;
+      width: 25%;
+      text-align: center;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+    #divDisplaysignback {
+
+    }
+
+    #divDisplaysignbase {
+      width: 30%;
+      position: absolute;
+      left: 35%;
+      bottom: -30%;
+      z-index: -1;
     }
 
     .thumbpic {
-      border-radius: 25px;
-      height: 25%;
-      width: 45%;
+      border-radius: 35px;
+      height: 40%;
+      width: 40%;
       position: absolute;
-      bottom: 70px;
-      right: 10px;
+      bottom: 30%;
+      right: 10%;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;

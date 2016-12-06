@@ -1,11 +1,14 @@
-  <div class="homepage">
+<div class="homepage">
   <div class="center-frame">
     <div class="semi-transparent-background"></div>
-
-    <div id="divStarCredits" class="content-pane">
+    <div id="divExpressWeek" class="content-pane">
+      <input type="hidden" id="totstars" value="1" />
+      <input type="hidden" id="location" />
+      <input type="hidden" id="totescost" />
+      <input type="hidden" id="vacas" />
       <h1>Star Credits</h1>
       <div id="starloc">
-        <div class="starremaining"><h3>Stars Remaining</h3></div>
+        <div class="starremaining">Stars Remaining</div>
         <div class="starright">
           <img id="starz1" class="starpowa" src="/images/fullstar.jpg">
           <img id="starz2" class="starpowa" src="/images/fullstar.jpg">
@@ -15,104 +18,107 @@
           <img id="starz6" class="starpowa" src="/images/fullstar.jpg">
         </div>
       </div>
+      <a href="#" id="btnBack"><img src="/images/back-small.png" /></a>
 
-      <div id="destinationchoice" class="planning">
-          <div class="planlink tilt">
-            <a id="Ireland" href="#"><img class="darken" src="/images/polaroidireland1.jpg"></a>
+      <div id="divExpressSelection">
+        <div id="destinationchoice" class="planning">
+          <div class="planlink tilt express-destination" data-destination="Ireland">
+              <a id="Ireland" href="#"><img class="darken" src="/images/polaroidireland1.jpg"></a>
           </div>
-          <div class="planlink tilt">
-            <a id="Orlando" href="#"><img class="darken" src="/images/polaroidorlando1.jpg"></a>
+          <div class="planlink tilt express-destination" data-destination="Orlando">
+              <a id="Orlando" href="#"><img class="darken" src="/images/polaroidorlando1.jpg"></a>
           </div>
-          <div class="planlink tilt">
-            <a id="Fiji" href="#"><img class="darken" src="/images/polaroidfiji1.jpg"></a>
+          <div class="planlink tilt express-destination" data-destination="Fiji">
+              <a id="Fiji" href="#"><img class="darken" src="/images/polaroidfiji1.jpg"></a>
           </div>
-          <div class="planlink tilt">
-            <a id="Italy" href="#"><img class="darken" src="/images/polaroiditaly1.jpg"></a>
+          <div class="planlink tilt express-destination" data-destination="Italy">
+              <a id="Italy" href="#"><img class="darken" src="/images/polaroiditaly1.jpg"></a>
           </div>
-          <div class="planlink tilt">
-            <a id="Daytona" href="#"><img class="darken" src="/images/polaroiddaytona1.jpg"></a>
+          <div class="planlink tilt express-destination" data-destination="Daytona">
+              <a id="Daytona" href="#"><img class="darken" src="/images/polaroiddaytona1.jpg"></a>
           </div>
-          <div class="planlink tilt">
-            <a id="MyrtleBeach" href="#"><img class="darken" src="/images/polaroidmyrtlebeach1.jpg"></a>
-          </div>
-        </div>
-
-        <div id="reviewbox">
-          <div id="reviewpic">
-            <h3>Vacation</h3>
-            <br>
-            <h4><div id="vacalocation"></div></h4>
-            <h5>7 Days - One Bedroom Condo</h5>
-            <!-- <img id="polaroidpic" class="planlink shadow qpolfix" src="/images/polaroidireland.jpg"> -->
-            <div id="rotating-item-wrapper" class="qpolfix">
-             <img id="planpic1" class="rotating-item Q-pol shadow" src="/images/ireland1.jpg"/>
-             <img id="planpic2" class="rotating-item Q-pol shadow" src="/images/ireland2.jpg"/>
-             <img id="planpic3" class="rotating-item Q-pol shadow" src="/images/ireland3.jpg"/>
-             <img id="planpic4" class="rotating-item Q-pol shadow" src="/images/ireland4.jpg"/>
-             <img id="planpic5" class="rotating-item Q-pol shadow" src="/images/ireland5.jpg"/>
-            </div>
-          </div>
-
-        <div id="reviewspecs" class"reviewowner">
-          <h3>Credits & Fees</h3>
-          <table>
-            <tr>
-              <td class="blacktext largetext">Processing Fee</td>
-              <td class="blacktext largetext">$189 +</td>
-              <td></td>
-              <td><img class="starpowa" src="/images/fullstar.jpg"></td>
-            </tr>
-            <tr>
-              <td class="orangemoney largetext">Non Continental Fee</td>
-              <td class="orangemoney largetext">$275 =</td>
-              <td></td>
-              <td><img id="star2" class="starpowa" src="/images/emptystar.jpg"></td>
-            </tr>
-            <tr>
-              <td class="orangemoney largetext">2-Bedroom Upgrade</td>
-              <td class="orangemoney largetext">$189 =</td>
-              <td></td>
-              <td><img id="star3" class="starpowa" src="/images/emptystar.jpg"></td>
-            </tr>
-            <tr>
-              <td class="orangemoney largetext">3-Bedroom Upgrade</td>
-              <td class="orangemoney largetext">$378 =</td>
-              <td><img id="star4" class="starpowa" src="/images/emptystar.jpg"></td>
-              <td><img id="star5" class="starpowa" src="/images/emptystar.jpg"></td>
-            </tr>
-            <tr>
-              <td class="orangemoney largetext">Peak Season Upgrade</td>
-              <td class="orangemoney largetext">$275 =</td>
-              <td></td>
-              <td><img id="star6" class="starpowa" src="/images/emptystar.jpg"></td>
-              <div id="startotals">$189 + 1 Star</div>
-            </tr>
-          </table>
-          <div style="width: 100%;">
-            <td><img style="width: 100%; height: 5px;" src="/images/line.jpg"></td>
-          </div>
-          <div id="startotals" class="orangemoney largetext"></div>
-      </div>
-        <div id="reviewbook">
-          <div class="bookington">
-            <img class="bookimage" src="/images/baggage.jpg"></img>
-            <h4>Book Vacation!</h4>
+          <div class="planlink tilt express-destination" data-destination="MyrtleBeach">
+              <a id="MyrtleBeach" href="#"><img class="darken" src="/images/polaroidmyrtlebeach1.jpg"></a>
           </div>
         </div>
       </div>
 
-      <div id="reviewcongrats" class="deadClass">
-        <h6>Enjoy <span id="congratsloca"></span>!</h6>
-        <br>
-        <h3>By Using <span id="moztars"></span> STARS, you just planned a 7 day vacation in <span id="congratslocb"></span> for</h3>
-        <br><br>
-        <div class="dolladay">$ <span id="congratsprice"></span> per day!</div>
-        <br>
-        <h4><div id="mostars">You still have STARS! Go ahead, book another Expressway Week!</div></h4>
-        <div id="booknew"><br>Book Another<br>Express Week!</div>
+      <div id="reviewboxe">
+        <div id="reviewpic">
+          <h3>Vacation</h3>
+          <br>
+          <h4><div id="vacalocation"></div></h4>
+          <h5>7 Days - One Bedroom Condo</h5>
+          <!-- <img id="polaroidpic" class="planlink shadow qpolfix" src="/images/polaroidireland.jpg"> -->
+          <div id="rotating-item-wrapper" class="qpolfix">
+           <img id="planpic1" class="rotating-item Q-pol shadow" src="/images/ireland1.jpg"/>
+           <img id="planpic2" class="rotating-item Q-pol shadow" src="/images/ireland2.jpg"/>
+           <img id="planpic3" class="rotating-item Q-pol shadow" src="/images/ireland3.jpg"/>
+           <img id="planpic4" class="rotating-item Q-pol shadow" src="/images/ireland4.jpg"/>
+           <img id="planpic5" class="rotating-item Q-pol shadow" src="/images/ireland5.jpg"/>
+          </div>
+        </div>
+
+      <div id="reviewspecs" class"reviewowner">
+        <h3>Credits & Fees</h3>
+        <table>
+          <tr>
+            <td class="blacktext largetext">Processing Fee</td>
+            <td class="blacktext largetext">$189 +</td>
+            <td></td>
+            <td><img class="starpowa" src="/images/fullstar.jpg"></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">Non Continental Fee</td>
+            <td class="orangemoney largetext">$275 =</td>
+            <td></td>
+            <td><img id="star2" class="starpowa" src="/images/emptystar.jpg"></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">2-Bedroom Upgrade</td>
+            <td class="orangemoney largetext">$189 =</td>
+            <td></td>
+            <td><img id="star3" class="starpowa" src="/images/emptystar.jpg"></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">3-Bedroom Upgrade</td>
+            <td class="orangemoney largetext">$378 =</td>
+            <td><img id="star4" class="starpowa" src="/images/emptystar.jpg"></td>
+            <td><img id="star5" class="starpowa" src="/images/emptystar.jpg"></td>
+          </tr>
+          <tr>
+            <td class="orangemoney largetext">Peak Season Upgrade</td>
+            <td class="orangemoney largetext">$275 =</td>
+            <td></td>
+            <td><img id="star6" class="starpowa" src="/images/emptystar.jpg"></td>
+            <div id="startotals">$189 + 1 Star</div>
+          </tr>
+        </table>
+        <div style="width: 100%;">
+          <td><img style="width: 100%; height: 5px;" src="/images/line.jpg"></td>
+        </div>
+        <div id="startotals" class="orangemoney largetext"></div>
+    </div>
+      <div id="reviewbook">
+        <div class="bookington">
+          <img class="bookimage" src="/images/baggage.jpg"></img>
+          <h4>Book Vacation!</h4>
+        </div>
       </div>
+    </div>
+
+
+    <div id="reviewcongrats" class="deadClass">
+      <h6>Enjoy <span id="congratsloca"></span>!</h6>
+      <br>
+      <h3>By Using <span id="moztars"></span> STARS, you just planned a 7 day vacation in <span id="congratslocb"></span> for</h3>
+      <br><br>
+      <div class="dolladay">$ <span id="congratsprice"></span> per day!</div>
+      <br>
+      <h4><div id="mostars">You still have STARS! Go ahead, book another Expressway Week!</div></h4>
+    </div>
     </div>
   </div>
 </div>
 
-<% block('localScripts', '<script src="/page_js/survey.js"></script>') %>
+<% block('localScripts', '<script src="/page_js/planning.js"></script>') %>
