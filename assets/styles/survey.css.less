@@ -208,7 +208,7 @@
     height: 65px;
     border: 4px #0088bb solid;
     border-radius: 10px;
-    width: 665px;
+    width: 660px;
     background-color: #ffffff;
     margin-left: auto;
     margin-top: 10px;
@@ -230,14 +230,14 @@
 
   #reviewpic {
     opacity: 0.8;
-    position: relative;
+    display: inline-block;
     background-color: #cccccc;
     border: 1px #000000 solid;
     border-radius: 10px;
     padding: 10px;
     margin: 20px 20px 20px 20px;
     width: 25%;
-    height: 450px;
+    height: 500px;
     float: left;
     padding: 10px;
   }
@@ -432,8 +432,8 @@
     font-style: italic;
     opacity: 0.7;
     display: inline-block !important;
-    width: 17%;
-    margin: 0% 7% 1% 7%;
+    width: 15%;
+    margin: 0% 7% 0.5% 7%;
     display: flex;
   }
 
@@ -476,6 +476,14 @@
 
   img.back{
     z-index:-1;
+  }
+
+  #smallreviewphoto {
+    width: 80%;
+  }
+
+  #smallreviewphoto img {
+    width: 100%;
   }
 
   .qpolfix {
@@ -596,10 +604,13 @@
   }
 
   .Q-pol {
-    height: 210px;
-    width: 240px;
+    width: 80%;
     margin-left: 5px;
     margin-top: 13px;
+  }
+
+  .Q-pol img {
+    width: 100%;
   }
 
   .right-text {
