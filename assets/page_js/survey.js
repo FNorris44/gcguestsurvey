@@ -77,6 +77,7 @@ $(document).ready(function(){
       $("#gc5").css({ opacity: 0 });
       $("#divDisplayButtons").css({ opacity: 0 });
       $("#divDisplaysignbase").css({ opacity: 0 });
+      $("h1").innerHTML = "Anyway Dollars";
 
       q5 = parseInt(document.getElementById("surveyvalue").value);
 
