@@ -7,9 +7,11 @@ $(document).ready(function(){
 
   if ($("#gc1").hasClass("owner")) {
     $("#surveyvalue").val("300");
+    $("#surveyperc").val("$");
   }
   else {
     $("#surveyvalue").val("2");
+    $("#surveyperc").val("");
   }
 
   $("#trigger").click(function() {
@@ -26,9 +28,11 @@ $(document).ready(function(){
       document.getElementById("gs1").innerHTML = document.getElementById("gc1").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("75");
+        $("#surveyperc").val("$");
       }
       else {
         $("#surveyvalue").val("150");
+        $("#surveyperc").val("$");
       }
     } else if ($("#gc2").css("opacity") == 1) {
       $("#gc2").css({ opacity: 0 });
@@ -38,9 +42,11 @@ $(document).ready(function(){
       document.getElementById("gs2").innerHTML = document.getElementById("gc2").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("75");
+        $("#surveyperc").val("$");
       }
       else {
         $("#surveyvalue").val("7");
+        $("#surveyperc").val("");
       }
     } else if ($("#gc3").css("opacity") == 1) {
       $("#gc3").css({ opacity: 0 });
@@ -55,9 +61,11 @@ $(document).ready(function(){
       document.getElementById("gs3").innerHTML = document.getElementById("gc3").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("10");
+        $("#surveyperc").val("");
       }
       else {
         $("#surveyvalue").val("10");
+        $("#surveyperc").val("");
       }
     } else if ($("#gc4").css("opacity") == 1) {
       $("#gc4").css({ opacity: 0 });
@@ -67,24 +75,22 @@ $(document).ready(function(){
       document.getElementById("gs4").innerHTML = document.getElementById("gc4").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("5");
+        $("#surveyperc").val("%");
       }
       else {
         $("#surveyvalue").val("3");
+        $("#surveyperc").val("%");
       }
     } else if ($("#gc5").css("opacity") == 1) {
       $("#questiontable").toggleClass("deadClass");
-      $(".thumbpic").css({ opacity: 0 });
-      $("#gc5").css({ opacity: 0 });
-      $("#divDisplayButtons").css({ opacity: 0 });
-      $("#divDisplaysignbase").css({ opacity: 0 });
-      $("h1").innerHTML = "Anyway Dollars";
+      document.getElementById("hheader").innerHTML = "Anyway Dollars";
 
       q5 = parseInt(document.getElementById("surveyvalue").value);
 
       document.getElementById("survey5").innerHTML = q5.toString() + "%";
       document.getElementById("gs5").innerHTML = document.getElementById("gc5").innerHTML;
 
-      $("#trigger,#up,#down,#surveyvalue,#surveydesd,#surveydesc").css({ opacity: 0 });
+      $("#trigger,#up,#down,#surveyvalue,#surveyperc,#surveydesd,#surveydesc,#gc5,#divDisplayButtons,#divDisplaysignbase,.thumbpic").css({ opacity: 0 });
       $("#reviewbox,#gs1,#gs2,#gs3,#gs4,#gs5,#survey1,#survey2,#survey3,#survey4,#survey5").css({ opacity: 1 });
 
       if ($("#gc1").hasClass("owner")) {

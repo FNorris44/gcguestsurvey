@@ -153,7 +153,7 @@
   }
 
   .expmed {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
     color: #000000;
     font-family: Verdana, Geneva, serif;
@@ -544,7 +544,7 @@
 
   .hiddentext{
     font-size: 35px;
-    color: #007700;
+    color: #eeeeee;
     font-weight: bold;
     font-style: italic;
     text-shadow: 2px 2px #000000;
@@ -831,16 +831,51 @@
       margin: 2% 0% 2% 10%;
     }
 
+    .percenter {
+      background: #ffffff no-repeat right top;
+      font-size: .7em;
+      z-index: -1;
+    }
+
     #surveyvalue {
       font-size: .7em;
-      width: 25%;
-      text-align: center;
+      width: 18%;
+      text-align: right;
+      pointer-events: none;
+      position: relative;
+      background: #ffffff no-repeat right top;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
       transition: all 1s ease;
     }
+
+    #surveyperc {
+      font-size: .7em;
+      width: 7%;
+      text-align: center;
+      pointer-events: none;
+      position: relative;
+      background: #ffffff no-repeat right top;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+
+  #surveyvalue::after {
+    content: '';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:1;
+    background: transparent;
+
+  }
 
     #divDisplaysignback {
 
