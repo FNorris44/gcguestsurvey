@@ -4,7 +4,7 @@ $(document).ready(function() {
   var starz = 6;
   var totstars = 1;
   var totescost = parseInt(189/7);
-  var starplural;
+  var starplural = 'Star';
 
   function topstars() {
     if (starz < 1) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
       $('#reviewcongrats').hide();
       $('#reviewboxe').fadeOut().next().delay(250);
       $('#divExpressSelection').fadeIn();
-      vacas += 1;
+
     });
 
     $('#reviewbook').click(function() {
@@ -66,6 +66,7 @@ $(document).ready(function() {
       $('#reviewcongrats').show();
       starz -= totstars;
       topstars();
+      vacas += 1;
 
       document.getElementById("congratsprice").innerHTML = totescost;
       document.getElementById("moztars").innerHTML = totstars + " " + starplural;
@@ -83,42 +84,56 @@ $(document).ready(function() {
     else document.getElementById("star2").src = "/images/emptystar.jpg";
     checkstars();
   });
-
   $("#star3").click(function() {
     if ($("#star3").attr("src") == "/images/emptystar.jpg") {
-      if ($("#star4").attr("src") == "/images/emptystar.jpg") {
-        document.getElementById("star3").src = "/images/fullstar.jpg";
-      }
-      else {
-        document.getElementById("star4").src = "/images/emptystar.jpg";
-        document.getElementById("star5").src = "/images/emptystar.jpg";
-        document.getElementById("star3").src = "/images/fullstar.jpg";
-      }
+      document.getElementById("star3").src = "/images/fullstar.jpg";
     }
-    else {
-      document.getElementById("star3").src = "/images/emptystar.jpg";
+    else document.getElementById("star3").src = "/images/emptystar.jpg";
+    checkstars();
+  });
+  $("#star4").click(function() {
+    if ($("#star4").attr("src") == "/images/emptystar.jpg") {
+      document.getElementById("star4").src = "/images/fullstar.jpg";
     }
+    else document.getElementById("star4").src = "/images/emptystar.jpg";
     checkstars();
   });
 
-  $("#star4, #star5").click(function() {
-    if ($("#star4").attr("src") == "/images/emptystar.jpg") {
-      if ($("#star3").attr("src") == "/images/emptystar.jpg") {
-        document.getElementById("star4").src = "/images/fullstar.jpg";
-        document.getElementById("star5").src = "/images/fullstar.jpg";
-      }
-      else {
-        document.getElementById("star4").src = "/images/fullstar.jpg";
-        document.getElementById("star5").src = "/images/fullstar.jpg";
-        document.getElementById("star3").src = "/images/emptystar.jpg";
-      }
-    }
-    else {
-      document.getElementById("star4").src = "/images/emptystar.jpg";
-      document.getElementById("star5").src = "/images/emptystar.jpg";
-    }
-    checkstars();
-  });
+  // $("#star3").click(function() {
+  //   if ($("#star3").attr("src") == "/images/emptystar.jpg") {
+  //     if ($("#star4").attr("src") == "/images/emptystar.jpg") {
+  //       document.getElementById("star3").src = "/images/fullstar.jpg";
+  //     }
+  //     else {
+  //       document.getElementById("star4").src = "/images/emptystar.jpg";
+  //       document.getElementById("star5").src = "/images/emptystar.jpg";
+  //       document.getElementById("star3").src = "/images/fullstar.jpg";
+  //     }
+  //   }
+  //   else {
+  //     document.getElementById("star3").src = "/images/emptystar.jpg";
+  //   }
+  //   checkstars();
+  // });
+  //
+  // $("#star4, #star5").click(function() {
+  //   if ($("#star4").attr("src") == "/images/emptystar.jpg") {
+  //     if ($("#star3").attr("src") == "/images/emptystar.jpg") {
+  //       document.getElementById("star4").src = "/images/fullstar.jpg";
+  //       document.getElementById("star5").src = "/images/fullstar.jpg";
+  //     }
+  //     else {
+  //       document.getElementById("star4").src = "/images/fullstar.jpg";
+  //       document.getElementById("star5").src = "/images/fullstar.jpg";
+  //       document.getElementById("star3").src = "/images/emptystar.jpg";
+  //     }
+  //   }
+  //   else {
+  //     document.getElementById("star4").src = "/images/emptystar.jpg";
+  //     document.getElementById("star5").src = "/images/emptystar.jpg";
+  //   }
+  //   checkstars();
+  // });
 
   $("#star6").click(function() {
     if ($("#star6").attr("src") == "/images/emptystar.jpg") {
@@ -134,11 +149,11 @@ $(document).ready(function() {
     if ($("#star2").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
     if ($("#star3").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
     if ($("#star4").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
-    if ($("#star5").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
-    if ($("#star6").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+    // if ($("#star5").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
+    // if ($("#star6").attr("src") == "/images/fullstar.jpg") {creditstars += 1;}
     if (creditstars > 1) {starplural = "Stars"} else {starplural = "Star"}
-
-    document.getElementById("startotals").innerHTML = "$189 + " + creditstars + " " + starplural;
+    document.getElementById("starcount").innerHTML = creditstars;
+    document.getElementById("startotals").innerHTML = starplural;
 
     totstars = creditstars;
   }

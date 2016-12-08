@@ -7,7 +7,7 @@ $(document).ready(function(){
 
   if ($("#gc1").hasClass("owner")) {
     $("#surveyvalue").val("300");
-    $("#surveyperc").val("$");
+    $("#surveycash").val("$");
   }
   else {
     $("#surveyvalue").val("2");
@@ -28,11 +28,10 @@ $(document).ready(function(){
       document.getElementById("gs1").innerHTML = document.getElementById("gc1").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("75");
-        $("#surveyperc").val("$");
       }
       else {
         $("#surveyvalue").val("150");
-        $("#surveyperc").val("$");
+        $("#surveycash").val("$");
       }
     } else if ($("#gc2").css("opacity") == 1) {
       $("#gc2").css({ opacity: 0 });
@@ -42,11 +41,10 @@ $(document).ready(function(){
       document.getElementById("gs2").innerHTML = document.getElementById("gc2").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("75");
-        $("#surveyperc").val("$");
       }
       else {
         $("#surveyvalue").val("7");
-        $("#surveyperc").val("");
+        $("#surveycash").val("");
       }
     } else if ($("#gc3").css("opacity") == 1) {
       $("#gc3").css({ opacity: 0 });
@@ -61,11 +59,10 @@ $(document).ready(function(){
       document.getElementById("gs3").innerHTML = document.getElementById("gc3").innerHTML;
       if ($("#gc1").hasClass("owner")) {
         $("#surveyvalue").val("10");
-        $("#surveyperc").val("");
+        $("#surveycash").val("");
       }
       else {
         $("#surveyvalue").val("10");
-        $("#surveyperc").val("");
       }
     } else if ($("#gc4").css("opacity") == 1) {
       $("#gc4").css({ opacity: 0 });
@@ -84,14 +81,19 @@ $(document).ready(function(){
     } else if ($("#gc5").css("opacity") == 1) {
       $("#questiontable").toggleClass("deadClass");
       document.getElementById("hheader").innerHTML = "Anyway Dollars";
-
       q5 = parseInt(document.getElementById("surveyvalue").value);
-
       document.getElementById("survey5").innerHTML = q5.toString() + "%";
       document.getElementById("gs5").innerHTML = document.getElementById("gc5").innerHTML;
 
-      $("#trigger,#up,#down,#surveyvalue,#surveyperc,#surveydesd,#surveydesc,#gc5,#divDisplayButtons,#divDisplaysignbase,.thumbpic").css({ opacity: 0 });
-      $("#reviewbox,#gs1,#gs2,#gs3,#gs4,#gs5,#survey1,#survey2,#survey3,#survey4,#survey5").css({ opacity: 1 });
+      $("#up,#down,#surveyvalue,#questiontable,#surveyperc,#surveycash,#gc5").css({ opacity: 0 });
+      $("#reviewleft").css({ opacity: 0.85 }).next().delay(225);
+      $("#survey1,#survey2,#survey3,#survey4,#survey5,#trigger,.thumbpic").css({ opacity: 1 }).next().delay(450);
+      $("#divDisplayButtons,#divDisplaysignbase").css({ opacity: 0.15 }).next().delay(225);
+
+    } else if ($("#reviewleft").css("opacity") == 0.85) {
+      $("#trigger,.thumbpic").css({ opacity: 0 });
+      $("#reviewrighta,#reviewrightb").css({ opacity: 0.85 }).next().delay(250);
+      $("#trigger").addClass("deadClass").delay(450);
 
       if ($("#gc1").hasClass("owner")) {
         ownerinflation = (q1*(Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));

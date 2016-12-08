@@ -1,13 +1,13 @@
 $(document).ready(function() {
+  var vacas = 0;
   if ($('#divExpressWeek').length > 0) {
     var starzee = function(init) {
       var starz = parseInt($('#starz').val(), 10);
       var tostars = parseInt($('#tostarts').val(), 10);
       var location = $('#location').val();
-      var vacas = $('#vacas').val();
+
       var totescost = parseInt($('#totescost').val(), 10);
       var roomcount;
-      var vacas = 1;
 
       if (starz < 1) {
         document.getElementById('starz1').src = '/images/emptystar.jpg';
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
       if ($("#destinationchoice").hasClass("express")) {
         document.getElementById("congratsloca").innerHTML = location;
-        document.getElementById("congratslocb").innerHTML = location + " for 7 Days - " + roomcount + " BedRoom Condo";
+        document.getElementById("congratslocb").innerHTML = location;
         document.getElementById("congratsprice").innerHTML = totescost.toFixed(0);
       }
 
@@ -55,36 +55,36 @@ $(document).ready(function() {
     /////////////////////////
     /////--Date Stuff--//////
     /////////////////////////
-    var today = new Date(), sixd = new Date(), sevend = new Date(),
-        thirteend = new Date(), fourteend = new Date(), twentyd = new Date(),
-        twentyeightd = new Date(), thirtyfod = new Date(), fofid = new Date(),
-        fioned = new Date();
-
-    sixd.setDate(today.getDate()+6);
-    sevend.setDate(today.getDate()+7);
-    thirteend.setDate(today.getDate()+13);
-    fourteend.setDate(today.getDate()+14);
-    twentyd.setDate(today.getDate()+20);
-    twentyeightd.setDate(today.getDate()+28);
-    thirtyfod.setDate(today.getDate()+34);
-    fofid.setDate(today.getDate()+45);
-    fioned.setDate(today.getDate()+51);
-
-    document.getElementById('date1').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
-    document.getElementById('date2').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
-    document.getElementById('date3').innerHTML = (formatdate(sevend) + ' - ' + formatdate(thirteend)).replace(/,/g, '');
-    document.getElementById('date4').innerHTML = (formatdate(fourteend) + ' - ' + formatdate(twentyd)).replace(/,/g, '');
-    document.getElementById('date5').innerHTML = (formatdate(twentyeightd) + ' - ' + formatdate(thirtyfod)).replace(/,/g, '');
-    document.getElementById('date6').innerHTML = (formatdate(fofid) + ' - ' + formatdate(fioned)).replace(/,/g, '');
-
-  function formatdate(init) {
-    var thingy = new Date(init).toLocaleDateString('en-GB', {
-      day : 'numeric',
-      month : 'short',
-      weekday : 'short',
-    }).split(' ').join(' ');
-      return thingy;
-    }
+  //   var today = new Date(), sixd = new Date(), sevend = new Date(),
+  //       thirteend = new Date(), fourteend = new Date(), twentyd = new Date(),
+  //       twentyeightd = new Date(), thirtyfod = new Date(), fofid = new Date(),
+  //       fioned = new Date();
+  //
+  //   sixd.setDate(today.getDate()+6);
+  //   sevend.setDate(today.getDate()+7);
+  //   thirteend.setDate(today.getDate()+13);
+  //   fourteend.setDate(today.getDate()+14);
+  //   twentyd.setDate(today.getDate()+20);
+  //   twentyeightd.setDate(today.getDate()+28);
+  //   thirtyfod.setDate(today.getDate()+34);
+  //   fofid.setDate(today.getDate()+45);
+  //   fioned.setDate(today.getDate()+51);
+  //
+  //   document.getElementById('date1').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+  //   document.getElementById('date2').innerHTML = (formatdate(today) + ' - ' + formatdate(sixd)).replace(/,/g, '');
+  //   document.getElementById('date3').innerHTML = (formatdate(sevend) + ' - ' + formatdate(thirteend)).replace(/,/g, '');
+  //   document.getElementById('date4').innerHTML = (formatdate(fourteend) + ' - ' + formatdate(twentyd)).replace(/,/g, '');
+  //   document.getElementById('date5').innerHTML = (formatdate(twentyeightd) + ' - ' + formatdate(thirtyfod)).replace(/,/g, '');
+  //   document.getElementById('date6').innerHTML = (formatdate(fofid) + ' - ' + formatdate(fioned)).replace(/,/g, '');
+  //
+  // function formatdate(init) {
+  //   var thingy = new Date(init).toLocaleDateString('en-GB', {
+  //     day : 'numeric',
+  //     month : 'short',
+  //     weekday : 'short',
+  //   }).split(' ').join(' ');
+  //     return thingy;
+  //   }
 
     /////////////////////////////
     /////--End Date Stuff--//////
@@ -123,23 +123,13 @@ $(document).ready(function() {
       $('#reviewcongrats').hide();
       $('#reviewboxe').fadeOut().next().delay(250);
       $('#divExpressSelection').fadeIn();
-      vacas += 1;
-    });
 
-    $('#reviewbook').click(function() {
-      var starz = parseInt($('#starz').val(), 10);
-      var tostars = parseInt($('#tostarts').val(), 10);
-
-      starz -= totstars;
-      $('#starz').val(starz);
-      $('#totescost').val(189/7);
-      starzee(starz);
     });
 
     $('#reviewexpressa').click(function() {
       var starz = parseInt($('#starz').val(), 10);
       var tostars = parseInt($('#tostarts').val(), 10);
-
+      vacas += 1;
       starz -= 1;
       $('#starz').val(starz);
       $('#totescost').val(388/7);
@@ -149,7 +139,7 @@ $(document).ready(function() {
     $('#reviewexpressb').click(function() {
       var starz = parseInt($('#starz').val(), 10);
       var tostars = parseInt($('#tostarts').val(), 10);
-
+      vacas += 1;
       starz -= 2;
       $('#starz').val(starz);
       $('#totescost').val(189/7);

@@ -3,26 +3,68 @@
   height: 100vh;
   overflow: hidden;
 
+  .thumbpic {
+    border-radius: 20%;
+    height: 18%;
+    width: 15%;
+    position: absolute;
+    bottom: 17%;
+    right: 35%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10;
+  }
+
+  .thumbpic:hover {
+    margin-right: 1.5vw;
+  }
+
+  .arrow {
+    width: 20%;
+    border-radius: 50%;
+    margin: 0 auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 4;
+  }
+  .arrow:hover {
+    width: 21%;
+  }
+
+  #divDisplaysignbase {
+    width: 15%;
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    z-index: 1;
+  }
+
   .divHomeLinks {
     float: left;
-    opacity: 0.7;
-    width: 44%;
+    opacity: 0.8;
+    width: 45%;
     height: 39%;
-    margin: 3%;
+    margin: 2.5%;
     display: inline-block !important;
   }
 
   .divHomeLinks div {
     overflow: hidden;
     height: 100%;
-    border-radius: 20px;
+    border-radius: .7vw;
   }
 
   .divHomeLinks img {
     width: 100%;
     display: block;
     object-fit: contain;
-    border-radius: 20px;
+    border-radius: .7vw;
   }
 
   .homepics {
@@ -30,7 +72,7 @@
   }
 
   .center-frame {
-    width: 75%;
+    width: 80%;
     height: 80%;
     margin: auto;
     position: absolute;
@@ -47,6 +89,17 @@
     top: 0px;
     left: 0px;
     opacity: 0.7;
+    width: 8%;
+    height: 8%;
+  }
+
+  #lnkHomeIcon img {
+    width: 100%;
+  }
+
+  .surveytoot {
+    font-size: 2vw;
+    margin: 0 auto;
   }
 
   .content-pane {
@@ -89,71 +142,76 @@
 
   h1 {
     text-align: center;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#777777, #ffffff);
+    font-size: 5vw;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#666666, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 100%;
   }
 
   h2 {
-    font-size: 40px;
-    border: 2px #00bfff solid;
-    background-color: #00bfff;
+    font-size: 3.5vw;
     font-weight: bold;
-    border-radius: 5px;
     color: #ffffff;
   }
 
   h3 {
-    font-size: 35px;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 2.5vw;
     font-weight: bold;
-    color: #000000;
-    font-family: Verdana, Geneva, serif;
-    text-shadow: 1px 1px #aaaaaa;
+    color: #dddddd;
+    font-family: Courier New, Geneva, serif;
+    text-shadow: 3px 3px #555555;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
     font-family: Verdana, Geneva, serif;
-    text-shadow: 1px 1px #ffffff;
+    text-shadow: 3px 3px #222222;
   }
 
   h5 {
-    font-size: 10px;
+    font-size: 3vw;
     font-weight: bold;
-    color: #000000;
+    color: #222222;
     font-family: Verdana, Geneva, serif;
+    text-shadow: 3px 3px #999999;
   }
 
   h6 {
-    font-size: 40px;
+    font-size: 3.5vw;
+    margin: 1vw 25% 1vw 25%;
+    background: -webkit-linear-gradient(#c0c0c0, #EE7600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
-    color: #000000;
     font-family: Verdana, Geneva, serif;
-    text-shadow: 2px 2px #ffffff;
+    text-shadow: 4px 4px #ffffff;
+    text-align: center;
   }
 
   .dolladay {
-    font-size: 35px;
+    font-size: 3.5vw;
     font-weight: bold;
-    color: #064F40;
-    font-family: Verdana, Geneva, serif;
-    text-shadow: 2px 2px #ffffff;
+    font-style: italic;
+    color: #c0c0c0;
+    text-shadow: 4px 4px #064F40;
   }
 
   .expbig {
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #000000;
     font-family: Verdana, Geneva, serif;
-    text-shadow: 1px 1px #aaaaaa;
+    text-shadow: 2px 2px #dddddd;
   }
 
   .expmed {
-    font-size: 12px;
+    font-size: 1.2vw;
     font-weight: bold;
     color: #000000;
     font-family: Verdana, Geneva, serif;
@@ -173,19 +231,24 @@
   .numberno {
     float: left;
     height: 100%;
-    margin: 5px;
+    margin: 2%;
+    padding: 0.7vw 1vw 0.7vw 1vw;
+    border: 2px #00bfff solid;
+    background-color: #00bfff;
+    border-radius: 1vw;
   }
 
   .homeicon {
-    margin-left: 10px;
-    margin-top: 10px;
-    border-radius: 50px;
+    margin-left: 2%;
+    margin-top: 2%;
+    border-radius: 50%;
   }
 
   .starremaining {
     float: left;
-    font-size: 2.5em;
+    font-size: 3vw;
     font-weight: bold;
+    text-shadow: 2px 2px #888888;
   }
 
   .starright {
@@ -195,6 +258,9 @@
   #reviewcongrats {
     display: none;
     text-align: center;
+  }
+
+  .fadeinout {
     -webkit-transition-delay: 2s;
     transition-delay: 2s;
     -webkit-transition: opacity 2s ease-in;
@@ -205,146 +271,179 @@
   }
 
   #starloc {
-    height: 65px;
+    display: inline-block;
+    float: right;
+    height: 10%;
     border: 4px #0088bb solid;
-    border-radius: 10px;
-    width: 660px;
+    border-radius: .7vw;
+    width: 59%;
     background-color: #ffffff;
-    margin-left: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: auto;
+    margin: 0% 20% 2% 0%;
   }
 
   #reviewleft {
-    opacity: 0.8;
+    display: inline-block;
+    opacity: 0;
     background-color: #0F315D;
-    border: 2px #0F315D solid;
-    border-radius: 10px;
+    border: 2px #3F648F solid;
+    border-radius: 1vw;
     float: left;
-    padding: 10px;
-    margin: 20px 20px 20px 20px;
+    padding: 2%;
+    margin: 2% 0% 2% 2%;
     width: 40%;
     height: 70%;
   }
 
   #reviewpic {
-    opacity: 0.8;
     display: inline-block;
+    opacity: 0.8;
     background-color: #cccccc;
     border: 1px #000000 solid;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 20px 20px 20px;
+    border-radius: .7vw;
+    padding: .5vw;
+    margin: 2vw 1vw 2vw 1vw;
     width: 25%;
-    height: 500px;
+    height: 28vw;
     float: left;
-    padding: 10px;
+  }
+
+  #reviewpic img {
+    width: 80%;
+    margin-left: 10%;
   }
 
   #reviewbook {
+    display: inline-block;
     opacity: 0.8;
     background-color: #cccccc;
     border: 1px #000000 solid;
-    border-radius: 10px;
-    padding: 30px;
-    margin: 20px 20px 20px 20px;
+    border-radius: .7vw;
+    padding: .5vw;
+    margin: 2vw 1vw 2vw 1vw;
     width: 22%;
-    height: 400px;
-    float: left;
-    padding: 15px;
-    position: relative;
+    height: 28vw;
+    float: right;
+  }
+  //
+  // #reviewbook img {
+  //   width: 80%;
+  //   margin-left: 10%;
+  // }
+
+  .expressline {
+    background-color: #222222;
+    box-shadow: inset 0 0 5px 0 #ffffff;
+    height: 2px;
   }
 
-  #booknew {
-    font-size: 25px;
-    height: 125px;
-    width: 250px;
-    color: #ffffff;
-    font-family: Verdana, Geneva, serif;
-    background-color: #008080;
-    border: 4px #064F40 solid;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    font-weight: bold;
-    padding: 10px;
+
+  #reviewspecs td {
+    padding: .5vw;
   }
 
   #reviewspecs {
+    display: inline-block;
     opacity: 0.8;
     background-color: #ffffff;
     border: 1px #000000 solid;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 0px 20px 0px;
+    border-radius: .7vw;
+    padding: .5vw;
+    margin: 2vw 1vw 2vw 2vw;
     width: 43%;
-    height: 400px;
+    height: 28vw;
     float: left;
-    padding: 15px;
-    position: relative;
   }
 
-  #reviewright {
-    opacity: 0.8;
+  #reviewrighta {
+    display: inline-block;
+    opacity: 0;
     background-color: #000050;
-    border: 2px #000050 solid;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 20px 20px 45%;
-    width: 50%;
+    border: 2px #333383 solid;
+    border-radius: 1vw;
+    padding: .6vw;
+    margin: 2% 1% 2% 1%;
+    float: right;
+    width: 55%;
     height: 70%;
     color: #ffffff;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
   }
 
-  #reviewfinal {
-    background-color: #00bbee;
-    border: 2px #00bbee solid;
-    color: #ffffff;
-    opacity: 0.8;
+  #reviewrightb {
+    display: inline-block;
+    opacity: 0;
     background-color: #000050;
-    border: 2px #000050 solid;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 20px 20px 45%;
-    width: 50%;
+    border: 2px #333383 solid;
+    border-radius: 1vw;
+    padding: .6vw;
+    margin: 2% 1% 2% 2%;
+    width: 55%;
     height: 70%;
     color: #ffffff;
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+        -ms-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
   }
+  //
+  // #reviewfinal {
+  //   background-color: #00bbee;
+  //   border: 2px #00bbee solid;
+  //   color: #ffffff;
+  //   opacity: 0.8;
+  //   background-color: #000050;
+  //   border: 2px #000050 solid;
+  //   border-radius: .7vw;
+  //   padding: 10px;
+  //   margin: 20px 20px 20px 45%;
+  //   width: 50%;
+  //   height: 70%;
+  //   color: #ffffff;
+  // }
 
   #startotals {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+    width: 3vw;
     color: #ee7600;
-    font-size: 35px;
     font-weight: bold;
     text-align: right;
-    margin: 5px;
+    margin: .4vw;
+  }
+
+  #starcount {
+    width: 2vw;
+    color: #ee7600;
+    font-weight: bold;
+    text-align: right;
+    margin: .4vw;
   }
 
   .expressheight {
-    height: 55px;
+    height: 3vw;
   }
 
   .bookington {
-    height: 180px;
+    width: 80%;
+    height: 67%;
     border: 3px solid #eeaa77;
-    border-radius: 15px;
+    border-radius: 1vw;
     float: bottom;
     background-color: #FFFF88;
-    padding: 20px;
-    margin-top: 150px;
-    margin-bottom: auto;
+    padding: 1vw;
+    margin: 45% 0% 20% 10%;
     text-align: center;
   }
 
-  .bookimage {
-    height: 125px;
-    width: 155px;
-    border-radius: 15px;
+  .bookington img {
+    width: 100%;
   }
 
   .ownermoney {
@@ -371,45 +470,43 @@
   }
 
   .largetext {
-    font-size: 25px;
+    font-size: 1.7vw;
     font-weight: bold;
   }
 
   .supertext {
-    font-size: 45px;
+    font-size: 2.5vw;
     font-weight: bold;
     font-family: Verdana, Geneva, serif;
   }
 
   .expresssmall {
-    font-size: 27px;
+    font-size: 1.55vw;
     font-weight: bold;
     font-family: Verdana, Geneva, serif;
   }
 
   .expresstext {
-    font-size: 40px;
+    font-size: 2.5vw;
     font-weight: bold;
     font-family: Verdana, Geneva, serif;
   }
 
   .smalltext {
-    font-size: 20px;
+    font-size: 1.1vw;
   }
 
-
-
   .largedown {
-    padding-top:30px;
+    padding-top: 2.5vw;
   }
 
   .smalldown {
-    padding-top:25px;
+    padding-top: 2vw;
   }
 
   #destinationchoice {
     display: inline-block !important;
-    width: 99%;
+    width: 100%;
     overflow: visible;
   }
 
@@ -432,9 +529,10 @@
     font-style: italic;
     opacity: 0.7;
     display: inline-block !important;
-    width: 15%;
-    margin: 0% 7% 0.5% 7%;
+    width: 13.5%;
+    margin: 0% 0% 0.5% 11%;
     display: flex;
+    z-index: -1;
   }
 
   .planlink img {
@@ -443,16 +541,19 @@
   }
 
   .planpic {
-    margin-top: -40%;
-    width: 50%;
-    height: 60%;
-    border: 3px solid #eeaa77;
+    font-style: italic;
+    opacity: 1;
+    display: inline-block !important;
+    width: 13.5%;
+    margin: -2% 10.5% 0% 0.5%;
+    display: flex;
+    z-index: 1;
   }
 
   .planpic img {
-    width: 100%;
-    border: 1px black solid;
-   }
+    max-height: 100%;
+    max-width: 100%;
+  }
 
   .subpic {
     /*float: bottom;*/
@@ -476,18 +577,6 @@
 
   img.back{
     z-index:-1;
-  }
-
-  #smallreviewphoto {
-    width: 80%;
-  }
-
-  #smallreviewphoto img {
-    width: 100%;
-  }
-
-  .qpolfix {
-    margin: 20px;
   }
 
   .expressright {
@@ -529,9 +618,11 @@
   .sixth {
     width: 96%;
     height: 92%;
-    background-color: #dddddd;
-    border-radius: 5px;
-    border: 1px solid #000000;
+    min-width: 95%;
+    min-height: 91%;
+    background-color: #aaaaaa;
+    border-radius: 1vw;
+    border: 2px solid #000000;
     margin: 4%;
     display: inline-block;
   }
@@ -543,7 +634,7 @@
   .permhidden {visibility: hidden}
 
   .hiddentext{
-    font-size: 35px;
+    font-size: 2.1vw;
     color: #eeeeee;
     font-weight: bold;
     font-style: italic;
@@ -553,7 +644,7 @@
   }
 
   .surveytext{
-    font-size: 32px;
+    font-size: 2vw;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
     font-family: Verdana, Geneva, serif;
@@ -566,51 +657,39 @@
   }
 
   .remixer{
-    font-size: 15px;
+    font-size: 2vh;
     color: #ffffff;
     text-shadow: 2px 2px #000000;
     font-family: Verdana, Geneva, serif;
   }
 
   .plantext{
-    font-size: 25px;
+    font-size: 2vw;
     color: #000000;
     font-weight: bold;
     font-style: italic;
     text-shadow: 2px 2px #000000;
-    margin-top: -350px;
-    margin-left: 75px;
+    margin-top: -25vw;
+    margin-left: 4vw;
   }
 
-  .Questionnare {
-    margin: 60px 60px 60px 350px;
-  }
+  // .Questionnare {
+  //   margin: 60px 60px 60px 350px;
+  // }
 
   .Q-text {
-    font-size: 20px;
+    font-size: 1.6vw;
     color: #007700;
     font-weight: bold;
     font-style: italic;
     text-shadow: 2px 2px #000000;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 1vw;
+    margin-left: 1vw;
   }
 
   .starpowa {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    right: 0;
-  }
-
-  .Q-pol {
-    width: 80%;
-    margin-left: 5px;
-    margin-top: 13px;
-  }
-
-  .Q-pol img {
-    width: 100%;
+    width: 3vw;
+    height: 3vw;
   }
 
   .right-text {
@@ -628,7 +707,7 @@
   form {
     margin-left: auto;
     margin-right:auto;
-    font-size: 50px;
+    font-size: 3vw;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -645,7 +724,7 @@
   }
 
   .setwidth {
-    margin-left: 30px;
+    margin-left: 2vw;
     text-align: center;
   }
 
@@ -653,7 +732,7 @@
     display: block;
     z-index: 200 !important;
     border: solid 2px #C19A6B;
-    border-radius: 1em;
+    border-radius: 1vw;
   }
 
   .semi-transparent-background {
@@ -662,8 +741,8 @@
     height: 100%;
     background-color: #000000;
     z-index: -1 !important;
-    border-radius: 1em;
-    opacity: 0.6;
+    border-radius: 1vw;
+    opacity: 0.75;
     overflow: hidden;
   }
 
@@ -671,7 +750,7 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, 3);
     -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 3);
     -moz-box-shadow: 0 0 45px rgba(0, 0, 0, 3);
-    margin-right: 20px;
+    margin-right: 1,3vw;
   }
 
   .spin {
@@ -710,40 +789,32 @@
             transform: rotate(360deg);
   }
 
-  #reviewright td {
-    margin-left: 5px;
+  #reviewrighta td {
+    padding-left: .5vw;
+    padding-right: .5vw;
+  }
+
+  #reviewrightb td {
+    padding-left: .5vw;
+    padding-right: .5vw;
   }
 
   #reviewbox {
     position: relative;
-    opacity: 0;
+    opacity: 1;
     //display: none;
-    margin-top: 5px;
+    margin-top: .4vw;
     overflow: visible;
     height: auto;
-    -webkit-transition-delay: 2s; /* Safari */
-    transition-delay: 2s;
-    -webkit-transition: opacity 2s ease-in;
-       -moz-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-         -o-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
   }
 
   #reviewboxe {
     position: relative;
     //opacity: 0;
     display: none;
-    margin-top: 5px;
+    margin-top: .4vw;
     overflow: visible;
     height: auto;
-    -webkit-transition-delay: 2s; /* Safari */
-    transition-delay: 2s;
-    -webkit-transition: opacity 2s ease-in;
-       -moz-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-         -o-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
   }
 
   #divExpressWeek {
@@ -755,13 +826,13 @@
     #reviewexpressa {
       opacity: 0.8;
       background-color: #FFFF88;
-      border: 1px #eeaa77 solid;
-      border-radius: 10px;
-      padding: 30px;
-      margin: 60px 10px 20px 10px;
+      border: 2px #eeaa77 solid;
+      border-radius: .7vw;
+      padding: 2vw;
+      margin: 2.5vw .75vw 1.5vw .75vw;
       width: 33%;
       float: left;
-      padding: 15px;
+      padding: 1vw;
       position: relative;
       cursor: pointer;
     }
@@ -769,20 +840,28 @@
     #reviewexpressb {
       opacity: 0.8;
       background-color: #FFFF88;
-      border: 1px #eeaa77 solid;
-      border-radius: 10px;
-      padding: 30px;
-      margin: 60px 10px 20px 10px;
+      border: 2px #eeaa77 solid;
+      border-radius: .7vw;
+      padding: 2vw;
+      margin: 2.5vw .75vw 1.5vw .75vw;
       width: 33%;
       float: left;
-      padding: 15px;
+      padding: 1vw;
       position: relative;
       cursor: pointer;
     }
 
     #btnBack {
+      display: inline-block;
       display: none;
-      margin-left: 20px;
+      margin-left: 1.7vw;
+      width: 2vw;
+      height: 3vw;
+    }
+
+    #btnBack img {
+      width: 7%;
+      height: 7%;
     }
 
     .express-destination {
@@ -794,27 +873,12 @@
     }
   }
 
-  .arrow {
-    width: 25%;
-    height: 100%;
-    border-radius: 50%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-  }
-
-  .arrow:hover {
-    -webkit-filter: brightness(50%);
-    filter: brightness(50%);
-  }
-
   #divDisplayButtons {
-    background: #ffffff url("/images/signback.jpg") no-repeat right top;
+    background: url("/images/signback.jpg");
     background-size: cover;
     display: inline-block;
     position: absolute;
+    z-index: 3;
     right: 30%;
     width: 45%;
     height: 40%;
@@ -826,43 +890,63 @@
     transition: all 1s ease;
 
     .surveykeys {
-      height: 90%;
+      height: 100%;
       width: 100%;
-      margin: 2% 0% 2% 10%;
+      margin: 0% 0% 0% 10%;
+      padding: 0% 10% 0% 10%;
     }
 
     .percenter {
       background: #ffffff no-repeat right top;
-      font-size: .7em;
+      font-size: .4vw;
       z-index: -1;
     }
 
     #surveyvalue {
-      font-size: .7em;
-      width: 18%;
-      text-align: right;
-      pointer-events: none;
-      position: relative;
-      background: #ffffff no-repeat right top;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      transition: all 1s ease;
-    }
-
-    #surveyperc {
-      font-size: .7em;
-      width: 7%;
+      font-size: 2vw;
+      width: 15%;
+      margin-left: -3%;
       text-align: center;
       pointer-events: none;
       position: relative;
-      background: #ffffff no-repeat right top;
+      background: #dddddd no-repeat right top;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
       transition: all 1s ease;
+      z-index: 4;
+    }
+
+    #surveyperc {
+      font-size: 2vw;
+      width: 6%;
+      margin-left: -3%;
+      text-align: center;
+      pointer-events: none;
+      position: relative;
+      background: #dddddd no-repeat right top;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+      z-index: 4;
+    }
+
+    #surveycash {
+      font-size: 2vw;
+      width: 6%;
+      text-align: center;
+      pointer-events: none;
+      position: relative;
+      background: #dddddd no-repeat right top;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+
     }
 
   #surveyvalue::after {
@@ -874,37 +958,11 @@
     bottom:0;
     z-index:1;
     background: transparent;
-
   }
 
     #divDisplaysignback {
-
     }
 
-    #divDisplaysignbase {
-      width: 30%;
-      position: absolute;
-      left: 35%;
-      bottom: -30%;
-      z-index: -1;
-    }
 
-    .thumbpic {
-      border-radius: 35px;
-      height: 40%;
-      width: 40%;
-      position: absolute;
-      bottom: 30%;
-      right: 10%;
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      transition: all 1s ease;
-    }
-
-    .thumbpic:hover {
-      margin-right: 20px;
-    }
   }
 }
