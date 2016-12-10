@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     var centerIt = function (el /* (jQuery element) Element to center */) {
       if (!el) {
       	return;
@@ -15,20 +14,24 @@ $(document).ready(function(){
       moveIt();
   };
 
+  var topleftit = function (el /* (jQuery element) Element to center */) {
+      if (!el) {
+        return;
+      }
+      var moveIt = function () {
+          el.css("position","absolute");
+          el.css("left", .6 + "vw");
+          el.css("top", .6 + "vw");
+      };
+      $(window).resize(moveIt);
+      moveIt();
+  };
+
   centerIt($('.center-frame'));
+  topleftit($('.homeicon'));
 
-var topleftit = function (el /* (jQuery element) Element to center */) {
-    if (!el) {
-      return;
-    }
-    var moveIt = function () {
-        el.css("position","absolute");
-        el.css("left", .6 + "vw");
-        el.css("top", .6 + "vw");
-    };
-    $(window).resize(moveIt);
-    moveIt();
-};
-    topleftit($('.homeicon'));
-
+  // Force the zoom to 100%
+  var scale = 'scale(1)';
+  document.body.style.webkitTransform =  scale;
+  document.body.style.transform = scale;
 });
