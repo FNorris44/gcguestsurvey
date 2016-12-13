@@ -130,7 +130,7 @@ $(document).ready(function() {
       var starz = parseInt($('#starz').val(), 10);
       var tostars = parseInt($('#tostarts').val(), 10);
       vacas += 1;
-      starz -= 1;
+      starz -= 0;
       $('#starz').val(starz);
       $('#totescost').val(388/7);
       starzee(starz);
@@ -140,7 +140,7 @@ $(document).ready(function() {
       var starz = parseInt($('#starz').val(), 10);
       var tostars = parseInt($('#tostarts').val(), 10);
       vacas += 1;
-      starz -= 2;
+      starz -= 1;
       $('#starz').val(starz);
       $('#totescost').val(189/7);
       starzee(starz);

@@ -80,7 +80,7 @@ $(document).ready(function(){
       }
     } else if ($("#gc5").css("opacity") == 1) {
       $("#questiontable").toggleClass("deadClass");
-      document.getElementById("hheader").innerHTML = "Anyway Dollars";
+      document.getElementById("hheader").innerHTML = "Cost of Your Future Vacations";
       q5 = parseInt(document.getElementById("surveyvalue").value);
       document.getElementById("survey5").innerHTML = q5.toString() + "%";
       document.getElementById("gs5").innerHTML = document.getElementById("gc5").innerHTML;
