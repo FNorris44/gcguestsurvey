@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var location;
   var vacas = 1;
-  var starz = 6;
+  var starz = 8;
   var totstars = 1;
   var totescost = parseInt(189/7);
   var starplural = 'Star';
@@ -16,9 +16,11 @@ $(document).ready(function() {
     if (starz < 4) {document.getElementById('starz4').src = '/images/emptystar.jpg';}
     if (starz < 5) {document.getElementById('starz5').src = '/images/emptystar.jpg';}
     if (starz < 6) {document.getElementById('starz6').src = '/images/emptystar.jpg';}
+    if (starz < 7) {document.getElementById('starz7').src = '/images/emptystar.jpg';}
+    if (starz < 8) {document.getElementById('starz8').src = '/images/emptystar.jpg';}
 
     if (starz < 1) {
-      document.getElementById("mostars").innerHTML = "You just booked " + vacas + " vacations for only 6 stars!";
+      document.getElementById("mostars").innerHTML = "You just booked " + vacas + " vacations for only 8 stars!";
       $("#booknew").toggleClass("deadClass");
     }
   }
