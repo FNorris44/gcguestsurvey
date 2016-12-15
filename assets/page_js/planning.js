@@ -52,6 +52,10 @@ $(document).ready(function() {
       $('#btnBack').show();
       document.getElementById("congratsloca").innerHTML = destination;
       document.getElementById("congratslocb").innerHTML = destination;
+      if(destination == 'Italy' || destination == 'Ireland' || destination == 'Fiji') {
+        document.getElementById("star3").src = "/images/fullstar.jpg";
+      }
+      checkstars();
     });
 
     $('#btnBack').click(function () {
@@ -60,6 +64,9 @@ $(document).ready(function() {
       $('#reviewcongrats').hide();
       $('#reviewboxe').fadeOut().next().delay(250);
       $('#divExpressSelection').fadeIn();
+      document.getElementById("star2").src = "/images/emptystar.jpg";
+      document.getElementById("star4").src = "/images/emptystar.jpg";
+      document.getElementById("star3").src = "/images/emptystar.jpg";
 
     });
 

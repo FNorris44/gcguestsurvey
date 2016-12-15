@@ -92,10 +92,11 @@ $(document).ready(function(){
 
     } else if ($("#reviewleft").css("opacity") == 0.85) {
       $("#trigger,.thumbpic").css({ opacity: 0 });
-      $("#reviewrighta,#reviewrightb").css({ opacity: 0.85 }).next().delay(250);
+      $(".printbutt").css({ opacity: 1 });
       $("#trigger").addClass("deadClass").delay(450);
 
       if ($("#gc1").hasClass("owner")) {
+        $("#reviewrighta").css({ opacity: 0.85 }).next().delay(250);
         ownerinflation = (q1*(Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
         ownerexchange = (q4*(q3+q2));
         document.getElementById("ownermaintenance").innerHTML = "$" + parseInt(ownerinflation).toString();
@@ -106,6 +107,7 @@ $(document).ready(function(){
         document.getElementById("totalowner").innerHTML = "$" + (parseInt(ownerinflation + ownerexchange)).toString();
       }
       else {
+        $("#reviewrighta,#reviewrightb").css({ opacity: 0.85 }).next().delay(250);
         document.getElementById("inflationheader").innerHTML = q5;
         vacainflation = Math.ceil(q1/2)*q2*q3*((Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
         vacanoinflation = Math.ceil(q1/2)*q2*q3*q4;
