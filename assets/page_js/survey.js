@@ -94,14 +94,14 @@ $(document).ready(function(){
       $("#survey1,#survey2,#survey3,#survey4,#survey5,#trigger,.thumbpic").css({ opacity: 1 }).next().delay(450);
       $("#divDisplayButtons,#divDisplaysignbase").css({ opacity: 0.15 }).next().delay(225);
 
-    } else {
+    } else { //($("#reviewleft").css("opacity") != 1) 
       $("#trigger,.thumbpic").css({ opacity: 0 });
       $(".printbutt").css({ opacity: 1 });
       $("#trigger").addClass("deadClass").delay(450);
 
       if ($("#gc1").hasClass("owner")) {
         $("#reviewrighta").css({ opacity: 0.85 }).next().delay(250);
-        ownerinflation = 20000;//(q1*(Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
+        ownerinflation = (q1*(Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
         ownerexchange = (q4*(q3+q2));
         document.getElementById("ownermaintenance").innerHTML = "$" + parseInt(ownerinflation).toString();
         document.getElementById("ownerexchange").innerHTML = "$" + ownerexchange.toString();
@@ -113,14 +113,14 @@ $(document).ready(function(){
       else {
         $("#reviewrighta,#reviewrightb").css({ opacity: 0.85 }).next().delay(250);
         document.getElementById("inflationheader").innerHTML = q5;
-        vacainflation = 20000;// Math.ceil(q1/2)*q2*q3*((Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
-        vacanoinflation = 100;//Math.ceil(q1/2)*q2*q3*q4;
+        vacainflation =  Math.ceil(q1/2)*q2*q3*((Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
+        vacanoinflation = Math.ceil(q1/2)*q2*q3*q4;
         vacadiff = vacainflation - vacanoinflation;
-        // document.getElementById("inflationheader").innerHTML = q5.toString() + "%";
-        // document.getElementById("totalcost").innerHTML = "$" + parseInt(vacanoinflation);
-        // document.getElementById("totalcost2").innerHTML = "$" + parseInt(vacanoinflation);
-        // document.getElementById("totaldiff").innerHTML = "$" + parseInt(vacadiff);
-        // document.getElementById("totalinflation").innerHTML = "$" + parseInt(vacainflation);
+        document.getElementById("inflationheader").innerHTML = q5.toString() + "%";
+        document.getElementById("totalcost").innerHTML = "$" + parseInt(vacanoinflation);
+        document.getElementById("totalcost2").innerHTML = "$" + parseInt(vacanoinflation);
+        document.getElementById("totaldiff").innerHTML = "$" + parseInt(vacadiff);
+        document.getElementById("totalinflation").innerHTML = "$" + parseInt(vacainflation);
       }
 
       $(".pic-wrapper").fireworks({
