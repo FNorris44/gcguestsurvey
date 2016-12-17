@@ -113,7 +113,7 @@ $(document).ready(function(){
       else {
         $("#reviewrighta,#reviewrightb").css({ opacity: 0.85 }).next().delay(250);
         document.getElementById("inflationheader").innerHTML = q5;
-        vacainflation = Math.ceil(q1/2)*q2*q3*((Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
+        vacainflation = 20000;// Math.ceil(q1/2)*q2*q3*((Math.pow((1+(0.01*q5)),q4)-1)/(0.01*q5));
         vacanoinflation = Math.ceil(q1/2)*q2*q3*q4;
         vacadiff = vacainflation - vacanoinflation;
         document.getElementById("inflationheader").innerHTML = q5.toString() + "%";
