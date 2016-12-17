@@ -94,7 +94,7 @@ $(document).ready(function(){
       $("#survey1,#survey2,#survey3,#survey4,#survey5,#trigger,.thumbpic").css({ opacity: 1 }).next().delay(450);
       $("#divDisplayButtons,#divDisplaysignbase").css({ opacity: 0.15 }).next().delay(225);
 
-    } else { //($("#reviewleft").css("opacity") != 1) 
+    } else ($("#reviewleft").css("opacity") != 0) { 
       $("#trigger,.thumbpic").css({ opacity: 0 });
       $(".printbutt").css({ opacity: 1 });
       $("#trigger").addClass("deadClass").delay(450);
