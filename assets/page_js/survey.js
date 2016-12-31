@@ -1,7 +1,9 @@
 $(document).ready(function(){
   var location, totescost, roomcount, starz = 6, vacas = 1, totstars = 1,
       q1, q2, q3, q4, q5, q6, q7, q8, q9, vacainflation, ownerinflation,
-      ownerexchange, vacadiff,vacanoinflation;
+      ownerexchange, vacadiff,vacanoinflation, date = new Date();
+
+  $("#getdate").innerHTML = date;
 
   $(".printbutt").click(function() {
     $('#fireworksField').remove();
